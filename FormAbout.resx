@@ -117,26 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="rvxX_h9ldzk_QCKYehkgo5D35v8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rvxX-h9ldzk-QCKYehkgo5D35v8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MadameX_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MadameX_ico.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MAdamX_logo_Raw" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MAdamX logo Raw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MadameX_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MadameX logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="220px-Madonna_-_Madame_X_standard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\220px-Madonna_-_Madame_X_standard1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="madonna_madame_x_tour_dates_tickets_concerts" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\madonna-madame-x-tour-dates-tickets-concerts.webp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="aboutMadameX" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\aboutMadameX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TextBoxDescription.Text" xml:space="preserve">
+    <value>Description :
+
+(At runtime, the labels' text will be replaced with the application's assembly information.
+Customize the application's assembly information in the Application pane of Project Designer.)</value>
   </data>
 </root>
