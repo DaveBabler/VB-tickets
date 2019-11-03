@@ -15,6 +15,7 @@
 '                         Summary Report includes:  # charters, total revenue, average hours chartered, And programmer name. 
 '                         Yacht Type Report will list the yacht types in the combo box with programmer name And title at top.
 
+'dynamic text box generation https://stackoverflow.com/questions/11827527/how-to-get-value-in-dynamic-generated-textbox
 
 Public Class frmTicketEntryMain
     Private Sub frmTicketEntryMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load

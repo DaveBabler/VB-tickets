@@ -30,7 +30,7 @@ Partial Class frmTicketEntryMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Name = "frmTicketEntryMain"
-        Me.Text = "Form1"
+        Me.Text = "Ticket Entry"
         Me.ResumeLayout(False)
 
     End Sub
