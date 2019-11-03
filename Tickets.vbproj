@@ -76,6 +76,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="FormSplash.Designer.vb">
+      <DependentUpon>FormSplash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormTicketEntry.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +107,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormSplash.resx">
+      <DependentUpon>FormSplash.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTicketEntry.resx">
       <DependentUpon>FormTicketEntry.vb</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +144,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\rvxX-h9ldzk-QCKYehkgo5D35v8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\220px-Madonna_-_Madame_X_standard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200x1200bb.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
