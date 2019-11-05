@@ -139,4 +139,85 @@
   <data name="aboutMadameX" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\aboutMadameX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="NotoSansLao_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSansLao-Bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSansLao_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSansLao-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSansLisu_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSansLisu-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSans_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSans-Bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSans_BoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSans-BoldItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSans_Condensed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSans-Condensed.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSans_CondensedBold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSans-CondensedBold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSans_CondensedBoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSans-CondensedBoldItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSans_CondensedItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSans-CondensedItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSans_Italic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSans-Italic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSans_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSans-Light.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSans_LightItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSans-LightItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSans_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSans-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSerifLao_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSerifLao-Bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSerifLao_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSerifLao-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSerif_Condensed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSerif-Condensed.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSerif_CondensedBold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSerif-CondensedBold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSerif_CondensedBoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSerif-CondensedBoldItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSerif_CondensedItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSerif-CondensedItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSerif_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSerif-Light.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSerif_LightItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSerif-LightItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotoSerif_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotoSerif-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Roboto_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Roboto-Black.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Roboto_BlackItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Roboto-BlackItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Roboto_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Roboto-Bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Roboto_BoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Roboto-BoldItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Roboto_ThinItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Roboto-ThinItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

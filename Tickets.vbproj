@@ -152,6 +152,33 @@
     <None Include="Resources\MAdamX logo Raw.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\NotoSans-Bold.ttf" />
+    <None Include="Resources\NotoSans-BoldItalic.ttf" />
+    <None Include="Resources\NotoSans-Condensed.ttf" />
+    <None Include="Resources\NotoSans-CondensedBold.ttf" />
+    <None Include="Resources\NotoSans-CondensedBoldItalic.ttf" />
+    <None Include="Resources\NotoSans-CondensedItalic.ttf" />
+    <None Include="Resources\NotoSans-Italic.ttf" />
+    <None Include="Resources\NotoSans-Light.ttf" />
+    <None Include="Resources\NotoSans-LightItalic.ttf" />
+    <None Include="Resources\NotoSans-Regular.ttf" />
+    <None Include="Resources\NotoSansLao-Bold.ttf" />
+    <None Include="Resources\NotoSansLao-Regular.ttf" />
+    <None Include="Resources\NotoSansLisu-Regular.ttf" />
+    <None Include="Resources\NotoSerif-Condensed.ttf" />
+    <None Include="Resources\NotoSerif-CondensedBold.ttf" />
+    <None Include="Resources\NotoSerif-CondensedBoldItalic.ttf" />
+    <None Include="Resources\NotoSerif-CondensedItalic.ttf" />
+    <None Include="Resources\NotoSerif-Light.ttf" />
+    <None Include="Resources\NotoSerif-LightItalic.ttf" />
+    <None Include="Resources\NotoSerif-Regular.ttf" />
+    <None Include="Resources\NotoSerifLao-Bold.ttf" />
+    <None Include="Resources\NotoSerifLao-Regular.ttf" />
+    <None Include="Resources\Roboto-Black.ttf" />
+    <None Include="Resources\Roboto-BlackItalic.ttf" />
+    <None Include="Resources\Roboto-Bold.ttf" />
+    <None Include="Resources\Roboto-BoldItalic.ttf" />
+    <None Include="Resources\Roboto-ThinItalic.ttf" />
     <None Include="Resources\rvxX-h9ldzk-QCKYehkgo5D35v8.jpg" />
   </ItemGroup>
   <ItemGroup>

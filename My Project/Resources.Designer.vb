@@ -22,7 +22,7 @@ Namespace My.Resources
     '''<summary>
     '''  A strongly-typed resource class, for looking up localized strings, etc.
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0"),  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0"),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
      Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
@@ -116,6 +116,276 @@ Namespace My.Resources
         Friend ReadOnly Property madonna_madame_x_tour_dates_tickets_concerts() As Byte()
             Get
                 Dim obj As Object = ResourceManager.GetObject("madonna_madame_x_tour_dates_tickets_concerts", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSans_Bold() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSans_Bold", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSans_BoldItalic() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSans_BoldItalic", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSans_Condensed() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSans_Condensed", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSans_CondensedBold() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSans_CondensedBold", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSans_CondensedBoldItalic() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSans_CondensedBoldItalic", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSans_CondensedItalic() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSans_CondensedItalic", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSans_Italic() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSans_Italic", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSans_Light() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSans_Light", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSans_LightItalic() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSans_LightItalic", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSans_Regular() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSans_Regular", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSansLao_Bold() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSansLao_Bold", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSansLao_Regular() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSansLao_Regular", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSansLisu_Regular() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSansLisu_Regular", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSerif_Condensed() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSerif_Condensed", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSerif_CondensedBold() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSerif_CondensedBold", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSerif_CondensedBoldItalic() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSerif_CondensedBoldItalic", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSerif_CondensedItalic() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSerif_CondensedItalic", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSerif_Light() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSerif_Light", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSerif_LightItalic() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSerif_LightItalic", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSerif_Regular() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSerif_Regular", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSerifLao_Bold() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSerifLao_Bold", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property NotoSerifLao_Regular() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NotoSerifLao_Regular", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property Roboto_Black() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Roboto_Black", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property Roboto_BlackItalic() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Roboto_BlackItalic", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property Roboto_Bold() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Roboto_Bold", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property Roboto_BoldItalic() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Roboto_BoldItalic", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property Roboto_ThinItalic() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Roboto_ThinItalic", resourceCulture)
                 Return CType(obj,Byte())
             End Get
         End Property
