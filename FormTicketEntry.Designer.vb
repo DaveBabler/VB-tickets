@@ -23,33 +23,36 @@ Partial Class frmTicketEntryMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.btnAddQuantities = New System.Windows.Forms.Button()
+        Me.lstSeatLocations = New System.Windows.Forms.ListBox()
         Me.ttTicketInfo = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
-        'Button1
+        'btnAddQuantities
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(251, 367)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnAddQuantities.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnAddQuantities.Font = New System.Drawing.Font("Noto Sans", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.btnAddQuantities.ForeColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.btnAddQuantities.Location = New System.Drawing.Point(232, 343)
+        Me.btnAddQuantities.Name = "btnAddQuantities"
+        Me.btnAddQuantities.Size = New System.Drawing.Size(93, 46)
+        Me.btnAddQuantities.TabIndex = 0
+        Me.btnAddQuantities.Text = "Add Quantities"
+        Me.btnAddQuantities.UseVisualStyleBackColor = False
         '
-        'ListBox1
+        'lstSeatLocations
         '
-        Me.ListBox1.BackColor = System.Drawing.Color.Gainsboro
-        Me.ListBox1.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 21
-        Me.ListBox1.Location = New System.Drawing.Point(12, 217)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
-        Me.ListBox1.Size = New System.Drawing.Size(203, 172)
-        Me.ListBox1.TabIndex = 1
+        Me.lstSeatLocations.BackColor = System.Drawing.Color.Gainsboro
+        Me.lstSeatLocations.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lstSeatLocations.ForeColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.lstSeatLocations.FormattingEnabled = True
+        Me.lstSeatLocations.ItemHeight = 21
+        Me.lstSeatLocations.Items.AddRange(New Object() {"dddd", "sss", "fffff"})
+        Me.lstSeatLocations.Location = New System.Drawing.Point(12, 217)
+        Me.lstSeatLocations.Name = "lstSeatLocations"
+        Me.lstSeatLocations.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
+        Me.lstSeatLocations.Size = New System.Drawing.Size(203, 172)
+        Me.lstSeatLocations.TabIndex = 1
         '
         'frmTicketEntryMain
         '
@@ -57,8 +60,8 @@ Partial Class frmTicketEntryMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(568, 450)
-        Me.Controls.Add(Me.ListBox1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.lstSeatLocations)
+        Me.Controls.Add(Me.btnAddQuantities)
         Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.Name = "frmTicketEntryMain"
         Me.Text = "Ticket Entry"
@@ -66,7 +69,7 @@ Partial Class frmTicketEntryMain
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents btnAddQuantities As Button
+    Friend WithEvents lstSeatLocations As ListBox
     Friend WithEvents ttTicketInfo As ToolTip
 End Class

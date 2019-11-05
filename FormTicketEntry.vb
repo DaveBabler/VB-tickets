@@ -22,5 +22,24 @@ Public Class frmTicketEntryMain
 
     End Sub
 
+    Private Sub lstSeatLocations_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstSeatLocations.SelectedIndexChanged
+        ''''TESTING METHOD!
+        '''
+        Debug.Print(lstSeatLocations.Items.Count)
+        For x = 0 To lstSeatLocations.SelectedItems.Count() - 1
+            For Each ob In lstSeatLocations.SelectedIndices
+                If CInt(ob) = x Then
+                    Console.WriteLine("We have {0:N} as ob and {1:N} as x", ob, x)
+                End If
+            Next ob
 
+            If lstSeatLocations.SelectedItems.Count() > 0 Then
+
+                    Console.WriteLine(lstSeatLocations.SelectedItems(x).ToString())
+                End If
+
+            Next x
+
+        ''''END TESTING METHOD
+    End Sub
 End Class
