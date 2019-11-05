@@ -18,8 +18,10 @@
 'dynamic text box generation https://stackoverflow.com/questions/11827527/how-to-get-value-in-dynamic-generated-textbox
 
 Public Class frmTicketEntryMain
+    Public strSectionNames As String() = {"Orchestra", "Mezzanine", "General", "Balcony"}
+    Public decPrices As Decimal() = {40.0, 27.5, 15.0, 10.0}
     Private Sub frmTicketEntryMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        '''put dictionary populater here
     End Sub
 
     Private Sub lstSeatLocations_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstSeatLocations.SelectedIndexChanged
@@ -35,15 +37,19 @@ Public Class frmTicketEntryMain
 
             If lstSeatLocations.SelectedItems.Count() > 0 Then
 
-                    Console.WriteLine(lstSeatLocations.SelectedItems(x).ToString())
-                End If
+                Console.WriteLine(lstSeatLocations.SelectedItems(x).ToString())
+            End If
 
-            Next x
+        Next x
 
         ''''END TESTING METHOD
     End Sub
 
     Private Sub btnAddQuantities_Click(sender As Object, e As EventArgs) Handles btnAddQuantities.Click
-        GlobalClass.UserErrorMessage("Hey Dave, you haven't programmed anything here yet!", "Oops!")
+        GlobalClass.PopulateStrDecDictionary(strSectionNames, decPrices, GlobalClass.dicSeatingPrices)
+        Console.WriteLine("{0:C}", decPrices(1))
+        For Each pair In GlobalClass.dicSeatingPrices
+            Console.WriteLine("{0} | {1:C}", pair.Key, pair.Value)
+        Next
     End Sub
 End Class
