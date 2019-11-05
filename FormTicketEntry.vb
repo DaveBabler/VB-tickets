@@ -42,4 +42,8 @@ Public Class frmTicketEntryMain
 
         ''''END TESTING METHOD
     End Sub
+
+    Private Sub btnAddQuantities_Click(sender As Object, e As EventArgs) Handles btnAddQuantities.Click
+        GlobalClass.UserErrorMessage("Hey Dave, you haven't programmed anything here yet!", "Oops!")
+    End Sub
 End Class
