@@ -39,6 +39,14 @@ Partial Class CumulativeTicketSummary
         Me.lblBalconyGeneralSold = New System.Windows.Forms.Label()
         Me.lblBalconyMezzanineSold = New System.Windows.Forms.Label()
         Me.lblBalconyOrchestraSold = New System.Windows.Forms.Label()
+        Me.lblBalconyPriceOut = New System.Windows.Forms.Label()
+        Me.lblBalconyCumulativeOut = New System.Windows.Forms.Label()
+        Me.lblGeneralPriceOut = New System.Windows.Forms.Label()
+        Me.lblGeneralCumulativeOut = New System.Windows.Forms.Label()
+        Me.lblMezzaninePriceOut = New System.Windows.Forms.Label()
+        Me.lblMezzanineCumulativeOut = New System.Windows.Forms.Label()
+        Me.lblOrchestraPriceOut = New System.Windows.Forms.Label()
+        Me.lblOrchestraCumulativeOut = New System.Windows.Forms.Label()
         Me.tlblyCumulative.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -49,6 +57,14 @@ Partial Class CumulativeTicketSummary
         Me.tlblyCumulative.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.71471!))
         Me.tlblyCumulative.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.71471!))
         Me.tlblyCumulative.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.92719!))
+        Me.tlblyCumulative.Controls.Add(Me.lblOrchestraCumulativeOut, 3, 6)
+        Me.tlblyCumulative.Controls.Add(Me.lblOrchestraPriceOut, 2, 6)
+        Me.tlblyCumulative.Controls.Add(Me.lblMezzanineCumulativeOut, 3, 5)
+        Me.tlblyCumulative.Controls.Add(Me.lblMezzaninePriceOut, 2, 5)
+        Me.tlblyCumulative.Controls.Add(Me.lblGeneralCumulativeOut, 3, 4)
+        Me.tlblyCumulative.Controls.Add(Me.lblGeneralPriceOut, 2, 4)
+        Me.tlblyCumulative.Controls.Add(Me.lblBalconyCumulativeOut, 3, 3)
+        Me.tlblyCumulative.Controls.Add(Me.lblBalconyPriceOut, 2, 3)
         Me.tlblyCumulative.Controls.Add(Me.lblBalconyCumulativeSold, 1, 3)
         Me.tlblyCumulative.Controls.Add(Me.lblCumulativeSalesHeader, 3, 2)
         Me.tlblyCumulative.Controls.Add(Me.lblTicketPriceHeader, 2, 2)
@@ -266,6 +282,94 @@ Partial Class CumulativeTicketSummary
         Me.lblBalconyOrchestraSold.Text = "888"
         Me.lblBalconyOrchestraSold.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
+        'lblBalconyPriceOut
+        '
+        Me.lblBalconyPriceOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblBalconyPriceOut.AutoSize = True
+        Me.lblBalconyPriceOut.Location = New System.Drawing.Point(296, 276)
+        Me.lblBalconyPriceOut.Name = "lblBalconyPriceOut"
+        Me.lblBalconyPriceOut.Size = New System.Drawing.Size(104, 31)
+        Me.lblBalconyPriceOut.TabIndex = 16
+        Me.lblBalconyPriceOut.Text = "$8888.88"
+        Me.lblBalconyPriceOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'lblBalconyCumulativeOut
+        '
+        Me.lblBalconyCumulativeOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblBalconyCumulativeOut.AutoSize = True
+        Me.lblBalconyCumulativeOut.Location = New System.Drawing.Point(522, 276)
+        Me.lblBalconyCumulativeOut.Name = "lblBalconyCumulativeOut"
+        Me.lblBalconyCumulativeOut.Size = New System.Drawing.Size(104, 31)
+        Me.lblBalconyCumulativeOut.TabIndex = 17
+        Me.lblBalconyCumulativeOut.Text = "$8888.88"
+        Me.lblBalconyCumulativeOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'lblGeneralPriceOut
+        '
+        Me.lblGeneralPriceOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblGeneralPriceOut.AutoSize = True
+        Me.lblGeneralPriceOut.Location = New System.Drawing.Point(296, 316)
+        Me.lblGeneralPriceOut.Name = "lblGeneralPriceOut"
+        Me.lblGeneralPriceOut.Size = New System.Drawing.Size(104, 31)
+        Me.lblGeneralPriceOut.TabIndex = 18
+        Me.lblGeneralPriceOut.Text = "$8888.88"
+        Me.lblGeneralPriceOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'lblGeneralCumulativeOut
+        '
+        Me.lblGeneralCumulativeOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblGeneralCumulativeOut.AutoSize = True
+        Me.lblGeneralCumulativeOut.Location = New System.Drawing.Point(522, 316)
+        Me.lblGeneralCumulativeOut.Name = "lblGeneralCumulativeOut"
+        Me.lblGeneralCumulativeOut.Size = New System.Drawing.Size(104, 31)
+        Me.lblGeneralCumulativeOut.TabIndex = 19
+        Me.lblGeneralCumulativeOut.Text = "$8888.88"
+        Me.lblGeneralCumulativeOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'lblMezzaninePriceOut
+        '
+        Me.lblMezzaninePriceOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblMezzaninePriceOut.AutoSize = True
+        Me.lblMezzaninePriceOut.Location = New System.Drawing.Point(296, 356)
+        Me.lblMezzaninePriceOut.Name = "lblMezzaninePriceOut"
+        Me.lblMezzaninePriceOut.Size = New System.Drawing.Size(104, 31)
+        Me.lblMezzaninePriceOut.TabIndex = 20
+        Me.lblMezzaninePriceOut.Text = "$8888.88"
+        Me.lblMezzaninePriceOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'lblMezzanineCumulativeOut
+        '
+        Me.lblMezzanineCumulativeOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblMezzanineCumulativeOut.AutoSize = True
+        Me.lblMezzanineCumulativeOut.Location = New System.Drawing.Point(522, 356)
+        Me.lblMezzanineCumulativeOut.Name = "lblMezzanineCumulativeOut"
+        Me.lblMezzanineCumulativeOut.Size = New System.Drawing.Size(104, 31)
+        Me.lblMezzanineCumulativeOut.TabIndex = 21
+        Me.lblMezzanineCumulativeOut.Text = "$8888.88"
+        Me.lblMezzanineCumulativeOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'lblOrchestraPriceOut
+        '
+        Me.lblOrchestraPriceOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblOrchestraPriceOut.AutoSize = True
+        Me.lblOrchestraPriceOut.Location = New System.Drawing.Point(296, 396)
+        Me.lblOrchestraPriceOut.Name = "lblOrchestraPriceOut"
+        Me.lblOrchestraPriceOut.Size = New System.Drawing.Size(104, 31)
+        Me.lblOrchestraPriceOut.TabIndex = 22
+        Me.lblOrchestraPriceOut.Text = "$8888.88"
+        Me.lblOrchestraPriceOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'lblOrchestraCumulativeOut
+        '
+        Me.lblOrchestraCumulativeOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblOrchestraCumulativeOut.AutoSize = True
+        Me.lblOrchestraCumulativeOut.Location = New System.Drawing.Point(522, 396)
+        Me.lblOrchestraCumulativeOut.Name = "lblOrchestraCumulativeOut"
+        Me.lblOrchestraCumulativeOut.Size = New System.Drawing.Size(104, 31)
+        Me.lblOrchestraCumulativeOut.TabIndex = 23
+        Me.lblOrchestraCumulativeOut.Text = "$8888.88"
+        Me.lblOrchestraCumulativeOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
         'CumulativeTicketSummary
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 31.0!)
@@ -301,4 +405,12 @@ Partial Class CumulativeTicketSummary
     Friend WithEvents lblBalconyGeneralSold As Label
     Friend WithEvents lblBalconyMezzanineSold As Label
     Friend WithEvents lblBalconyOrchestraSold As Label
+    Friend WithEvents lblOrchestraCumulativeOut As Label
+    Friend WithEvents lblOrchestraPriceOut As Label
+    Friend WithEvents lblMezzanineCumulativeOut As Label
+    Friend WithEvents lblMezzaninePriceOut As Label
+    Friend WithEvents lblGeneralCumulativeOut As Label
+    Friend WithEvents lblGeneralPriceOut As Label
+    Friend WithEvents lblBalconyCumulativeOut As Label
+    Friend WithEvents lblBalconyPriceOut As Label
 End Class
