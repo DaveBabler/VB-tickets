@@ -220,4 +220,22 @@
   <data name="Roboto_ThinItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Roboto-ThinItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="AGBookRounded_BoldOutline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AGBookRounded-BoldOutline.PFM;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AGBookRounded_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AGBookRounded-Medium.PFB;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AGBookRounded_Medium1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AGBookRounded-Medium.PFM;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AGBookRounded_MediumOutline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AGBookRounded-MediumOutline.PFM;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AGBookRounded_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AGBookRounded-Regular.PFM;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Confusions_on_a_Dancefloor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Confusions on a Dancefloor.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

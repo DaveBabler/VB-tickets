@@ -112,6 +112,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="TicketSummary.Designer.vb">
+      <DependentUpon>TicketSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TicketSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormAbout.resx">
@@ -129,6 +135,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="TicketSummary.resx">
+      <DependentUpon>TicketSummary.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -141,6 +150,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="Resources\AGBookRounded-BoldOutline.PFM" />
+    <None Include="Resources\AGBookRounded-Medium.PFB" />
+    <None Include="Resources\AGBookRounded-Medium.PFM" />
+    <None Include="Resources\AGBookRounded-MediumOutline.PFM" />
+    <None Include="Resources\AGBookRounded-Regular.PFM" />
+    <None Include="Resources\Confusions on a Dancefloor.ttf" />
     <None Include="Resources\madonna-madame-x-tour-dates-tickets-concerts.webp" />
   </ItemGroup>
   <ItemGroup>
