@@ -168,6 +168,7 @@
     <None Include="Resources\MAdamX logo Raw.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Madonna.ttf" />
     <None Include="Resources\NotoSans-Bold.ttf" />
     <None Include="Resources\NotoSans-BoldItalic.ttf" />
     <None Include="Resources\NotoSans-Condensed.ttf" />
@@ -208,6 +209,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\aboutMadameX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disco-pattern.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

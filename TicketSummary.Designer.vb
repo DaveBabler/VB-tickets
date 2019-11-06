@@ -28,21 +28,23 @@ Partial Class TicketSummary
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(213, 35)
+        Me.Label1.Font = New System.Drawing.Font("Madonna", 40.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(17, 2)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(84, 27)
+        Me.Label1.Size = New System.Drawing.Size(545, 120)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Label1"
+        Me.Label1.Text = "Madonna Tickets " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Receipt"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'TicketSummary
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 27.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(596, 753)
         Me.Controls.Add(Me.Label1)
-        Me.Font = New System.Drawing.Font("Semplicita", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
         Me.Name = "TicketSummary"
