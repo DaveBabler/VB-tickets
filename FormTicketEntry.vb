@@ -16,6 +16,7 @@
 '                         Yacht Type Report will list the yacht types in the combo box with programmer name And title at top.
 
 'dynamic text box generation https://stackoverflow.com/questions/11827527/how-to-get-value-in-dynamic-generated-textbox
+'hiding table layout panel columns & rows https://stackoverflow.com/questions/3290414/hide-and-show-a-cell-of-the-tablelayoutpanel
 
 Public Class frmTicketEntryMain
     Public strSectionNames As String() = {"Orchestra", "Mezzanine", "General", "Balcony"}
@@ -51,5 +52,9 @@ Public Class frmTicketEntryMain
         For Each pair In GlobalClass.dicSeatingPrices
             Console.WriteLine("{0} | {1:C}", pair.Key, pair.Value)
         Next
+    End Sub
+
+    Private Sub ResetAllDataToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetAllDataToolStripMenuItem.Click
+        'Verify the customer wants to totaly remove all data before you do it!
     End Sub
 End Class
