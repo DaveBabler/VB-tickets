@@ -76,6 +76,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CumulativeTicketSummary.Designer.vb">
+      <DependentUpon>CumulativeTicketSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CumulativeTicketSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormAbout.Designer.vb">
       <DependentUpon>FormAbout.vb</DependentUpon>
     </Compile>
@@ -120,6 +126,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CumulativeTicketSummary.resx">
+      <DependentUpon>CumulativeTicketSummary.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAbout.resx">
       <DependentUpon>FormAbout.vb</DependentUpon>
     </EmbeddedResource>

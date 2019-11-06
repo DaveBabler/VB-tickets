@@ -65,27 +65,26 @@ Partial Class TicketSummary
         Me.tblyTicketSummary.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.tblyTicketSummary.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.tblyTicketSummary.Controls.Add(Me.lblTicketHeader, 0, 0)
-        Me.tblyTicketSummary.Controls.Add(Me.lblSummaryForNameLabel, 0, 2)
-        Me.tblyTicketSummary.Controls.Add(Me.lblPurchaserName, 1, 2)
-        Me.tblyTicketSummary.Controls.Add(Me.lblTotalCost, 0, 3)
-        Me.tblyTicketSummary.Controls.Add(Me.lblTotalTicketsPurchased, 0, 4)
-        Me.tblyTicketSummary.Controls.Add(Me.lblBalcony, 0, 5)
-        Me.tblyTicketSummary.Controls.Add(Me.lblGeneralTickets, 0, 6)
-        Me.tblyTicketSummary.Controls.Add(Me.lblMezzanine, 0, 7)
-        Me.tblyTicketSummary.Controls.Add(Me.lblOrchestra, 0, 8)
-        Me.tblyTicketSummary.Controls.Add(Me.lblProgramAuthor, 0, 9)
-        Me.tblyTicketSummary.Controls.Add(Me.Label1, 1, 9)
-        Me.tblyTicketSummary.Controls.Add(Me.lblOrchestraOut, 1, 8)
-        Me.tblyTicketSummary.Controls.Add(Me.lblMezzanineOut, 1, 7)
-        Me.tblyTicketSummary.Controls.Add(Me.lblGeneralOut, 1, 6)
-        Me.tblyTicketSummary.Controls.Add(Me.lblBalconyOut, 1, 5)
-        Me.tblyTicketSummary.Controls.Add(Me.lblTotalPurchasedOut, 1, 4)
-        Me.tblyTicketSummary.Controls.Add(Me.lblTotalCostOut, 1, 3)
+        Me.tblyTicketSummary.Controls.Add(Me.lblSummaryForNameLabel, 0, 1)
+        Me.tblyTicketSummary.Controls.Add(Me.lblPurchaserName, 1, 1)
+        Me.tblyTicketSummary.Controls.Add(Me.lblTotalCost, 0, 2)
+        Me.tblyTicketSummary.Controls.Add(Me.lblTotalTicketsPurchased, 0, 3)
+        Me.tblyTicketSummary.Controls.Add(Me.lblBalcony, 0, 4)
+        Me.tblyTicketSummary.Controls.Add(Me.lblGeneralTickets, 0, 5)
+        Me.tblyTicketSummary.Controls.Add(Me.lblMezzanine, 0, 6)
+        Me.tblyTicketSummary.Controls.Add(Me.lblOrchestra, 0, 7)
+        Me.tblyTicketSummary.Controls.Add(Me.lblProgramAuthor, 0, 8)
+        Me.tblyTicketSummary.Controls.Add(Me.Label1, 1, 8)
+        Me.tblyTicketSummary.Controls.Add(Me.lblOrchestraOut, 1, 7)
+        Me.tblyTicketSummary.Controls.Add(Me.lblMezzanineOut, 1, 6)
+        Me.tblyTicketSummary.Controls.Add(Me.lblGeneralOut, 1, 5)
+        Me.tblyTicketSummary.Controls.Add(Me.lblBalconyOut, 1, 4)
+        Me.tblyTicketSummary.Controls.Add(Me.lblTotalPurchasedOut, 1, 3)
+        Me.tblyTicketSummary.Controls.Add(Me.lblTotalCostOut, 1, 2)
         Me.tblyTicketSummary.Location = New System.Drawing.Point(8, -6)
         Me.tblyTicketSummary.Name = "tblyTicketSummary"
-        Me.tblyTicketSummary.RowCount = 11
-        Me.tblyTicketSummary.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.tblyTicketSummary.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.tblyTicketSummary.RowCount = 9
+        Me.tblyTicketSummary.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120.0!))
         Me.tblyTicketSummary.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.tblyTicketSummary.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.tblyTicketSummary.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
@@ -94,7 +93,7 @@ Partial Class TicketSummary
         Me.tblyTicketSummary.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.tblyTicketSummary.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.tblyTicketSummary.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tblyTicketSummary.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tblyTicketSummary.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.tblyTicketSummary.Size = New System.Drawing.Size(580, 526)
         Me.tblyTicketSummary.TabIndex = 1
         '
@@ -198,7 +197,7 @@ Partial Class TicketSummary
         Me.lblProgramAuthor.AutoSize = True
         Me.lblProgramAuthor.Font = New System.Drawing.Font("Madonna", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblProgramAuthor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.lblProgramAuthor.Location = New System.Drawing.Point(104, 409)
+        Me.lblProgramAuthor.Location = New System.Drawing.Point(104, 452)
         Me.lblProgramAuthor.Name = "lblProgramAuthor"
         Me.lblProgramAuthor.Size = New System.Drawing.Size(183, 21)
         Me.lblProgramAuthor.TabIndex = 11
@@ -212,7 +211,7 @@ Partial Class TicketSummary
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Madonna", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(293, 409)
+        Me.Label1.Location = New System.Drawing.Point(293, 452)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(170, 21)
         Me.Label1.TabIndex = 12
