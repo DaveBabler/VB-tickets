@@ -153,6 +153,7 @@
     <None Include="Resources\AGBookRounded-BoldOutline.PFM" />
     <None Include="Resources\AGBookRounded-Medium.PFB" />
     <None Include="Resources\AGBookRounded-Medium.PFM" />
+    <None Include="Resources\AGBookRounded-Medium.ttf" />
     <None Include="Resources\AGBookRounded-MediumOutline.PFM" />
     <None Include="Resources\AGBookRounded-Regular.PFM" />
     <None Include="Resources\Confusions on a Dancefloor.ttf" />
