@@ -39,6 +39,8 @@ Public Class frmTicketEntryMain
             If lstSeatLocations.SelectedIndices.Contains(i) Then
                 strSelectedValue = lstSeatLocations.Items(i).ToString()
                 GlobalClass.CheckLabels(Me, strSelectedValue, False, True)
+                'GlobalClass.ReduceTableLayoutRowPercent(tbllyQuantity, i, "grow")   BRILLIANT PLAN WAS A FAILURE!!!
+
             End If
 
 
@@ -47,6 +49,8 @@ Public Class frmTicketEntryMain
 
                 strUnselected = lstSeatLocations.Items(i).ToString()
                 GlobalClass.CheckLabels(Me, strUnselected, True, False)
+                'GlobalClass.ReduceTableLayoutRowPercent(tbllyQuantity, i, "reduce")  BRILLIANT PLAN WAS A FAILURE!!!
+
 
 
             End If
