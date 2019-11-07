@@ -38,7 +38,7 @@
     Private Sub BackGroundStartLoading()
         ' This sub collates and loads various datastructures needed for the program during the splash screen so everything is ready to go when the forms load.
         ' A larger program would probably have some more stuff going on here but for this program populating the dictionary is sufficent.
-        GlobalClass.PopulateStrDecDictionary(frmTicketEntryMain.strSectionNames, frmTicketEntryMain.decPrices, GlobalClass.dicSeatingPrices)
+        'GlobalClass.PopulateStrDecDictionary(frmTicketEntryMain.strSectionNames, frmTicketEntryMain.decPrices, GlobalClass.dicSeatingPrices)
     End Sub
 
 

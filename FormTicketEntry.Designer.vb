@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmTicketEntryMain
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmTicketEntryMain
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.btnAddQuantities = New System.Windows.Forms.Button()
@@ -52,6 +52,8 @@ Partial Class frmTicketEntryMain
         Me.ResetAllDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ElementHost1 = New System.Windows.Forms.Integration.ElementHost()
+        Me.UserControl11 = New wpfUserControls.UserControl1()
         Me.tbllyQuantity.SuspendLayout()
         Me.mnuStripMain.SuspendLayout()
         Me.SuspendLayout()
@@ -282,7 +284,7 @@ Partial Class frmTicketEntryMain
         Me.lblSubtotalOut.AutoSize = True
         Me.lblSubtotalOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSubtotalOut.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblSubtotalOut.Location = New System.Drawing.Point(321, 405)
+        Me.lblSubtotalOut.Location = New System.Drawing.Point(347, 405)
         Me.lblSubtotalOut.Name = "lblSubtotalOut"
         Me.lblSubtotalOut.Size = New System.Drawing.Size(93, 24)
         Me.lblSubtotalOut.TabIndex = 12
@@ -294,7 +296,7 @@ Partial Class frmTicketEntryMain
         Me.mnuStripMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.DataToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.mnuStripMain.Location = New System.Drawing.Point(0, 0)
         Me.mnuStripMain.Name = "mnuStripMain"
-        Me.mnuStripMain.Size = New System.Drawing.Size(568, 24)
+        Me.mnuStripMain.Size = New System.Drawing.Size(880, 24)
         Me.mnuStripMain.TabIndex = 13
         Me.mnuStripMain.Text = "MenuStrip1"
         '
@@ -355,12 +357,22 @@ Partial Class frmTicketEntryMain
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem.Text = "&About"
         '
+        'ElementHost1
+        '
+        Me.ElementHost1.Location = New System.Drawing.Point(651, 50)
+        Me.ElementHost1.Name = "ElementHost1"
+        Me.ElementHost1.Size = New System.Drawing.Size(188, 379)
+        Me.ElementHost1.TabIndex = 14
+        Me.ElementHost1.Text = "ElementHost1"
+        Me.ElementHost1.Child = Me.UserControl11
+        '
         'frmTicketEntryMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(568, 450)
+        Me.ClientSize = New System.Drawing.Size(880, 450)
+        Me.Controls.Add(Me.ElementHost1)
         Me.Controls.Add(Me.lblSubtotalOut)
         Me.Controls.Add(Me.lblSubtotal)
         Me.Controls.Add(Me.btnExit)
@@ -414,4 +426,6 @@ Partial Class frmTicketEntryMain
     Friend WithEvents ResetAllDataToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ElementHost1 As Integration.ElementHost
+    Friend UserControl11 As wpfUserControls.UserControl1
 End Class

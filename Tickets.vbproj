@@ -51,16 +51,22 @@
     <ApplicationIcon>Resources\MadameX_ico.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -222,6 +228,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\disco-pattern.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\wpfUserControls\wpfUserControls.vbproj">
+      <Project>{00DCE955-1B64-416D-A0E3-73663A8E6BF8}</Project>
+      <Name>wpfUserControls</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
