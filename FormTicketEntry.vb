@@ -30,6 +30,22 @@ Public Class frmTicketEntryMain
         GlobalClass.PopulateStrDecDictionary(Me.strSectionNames, Me.decPrices, GlobalClass.dicSeatingPrices)
         'Dictionary is populated on splash screen!!!!
         GlobalClass.PopulateListBoxWithDictionary(lstSeatLocations, GlobalClass.dicSeatingPrices)
+        'Dim host As New ElementHost()
+        'host.Dock = DockStyle.Fill
+
+        '' Create the WPF UserControl.
+        'Dim uc As New UCWPF
+
+
+        '' Assign the WPF UserControl to the ElementHost control's
+        '' Child property.
+        'host.Child = uc
+
+        '' Add the ElementHost control to the form's
+        '' collection of child controls.
+        'Me.Controls.Add(host)
+        Ucwpf2.lstwpfSeating.Items.Add("Anal SlutsSSS")
+        GlobalClass.PopulateListBoxWithDictionary(Ucwpf2.lstwpfSeating, GlobalClass.dicSeatingPrices)
     End Sub
 
     Private Sub lstSeatLocations_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstSeatLocations.SelectedIndexChanged
@@ -144,7 +160,5 @@ Public Class frmTicketEntryMain
         End If
     End Sub
 
-    Private Sub ElementHost1_ChildChanged(sender As Object, e As Integration.ChildChangedEventArgs) Handles eleHost.ChildChanged
 
-    End Sub
 End Class

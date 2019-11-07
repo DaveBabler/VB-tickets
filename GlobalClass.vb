@@ -26,7 +26,13 @@
             lbToPopulate.Items.Add(pair.Key.ToString())  'to string just to be safe.
         Next
     End Sub
-
+    Public Shared Sub PopulateListBoxWithDictionary(ByRef lbToPopulate As System.Windows.Controls.ListBox, ByVal dicDataToUse As IDictionary)
+        ' Sub uses a generic dictionary interface to populate a listbox, clears it first.
+        lbToPopulate.Items.Clear()
+        For Each pair In dicDataToUse
+            lbToPopulate.Items.Add(pair.Key.ToString())  'to string just to be safe.
+        Next
+    End Sub
     Public Shared Sub ShowTblRowsBasedOnString(ByVal strLookup As String)
         'In theory this will display or hide table rows based upon the name passed on a dictionary 
         'this name should be part of the labels name on the form 

@@ -11,7 +11,6 @@
             <RowDefinition Height="287*"/>
             <RowDefinition Height="163*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="wpfButt" Content="WPFClicker" HorizontalAlignment="Left" Margin="25,115,0,0" Width="75" Height="20" VerticalAlignment="Top"/>
         <ListBox x:Name="lstwpfSeating" HorizontalAlignment="Left" Height="100" Margin="25,10,0,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>

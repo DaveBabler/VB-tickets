@@ -79,6 +79,7 @@
     <Import Include="System.Diagnostics" />
     <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms.Integration" />
     <Import Include="System.Windows.Threading" />
     <Import Include="System.Xml.Linq" />
     <Import Include="System.Threading.Tasks" />
