@@ -34,7 +34,7 @@ Public Class frmTicketEntryMain
         ''''TESTING METHOD!
         '''
         '''
-        Array.Clear(strLastActiveSelects, 0, 4)
+        'Array.Clear(strLastActiveSelects, 0, 4)
 
 
 
@@ -76,11 +76,12 @@ Public Class frmTicketEntryMain
                 Console.WriteLine(lstSeatLocations.SelectedItems(x).ToString())
                 GlobalClass.CheckLabels(Me, strSelectedValue, False, True)
                 Array.Clear(strCurrActiveSelects, 0, 4)
-            Else
+
                 intFlag += 1
 
             End If
 
+            ''''try this https://social.msdn.microsoft.com/Forums/en-US/e7b42e0b-1c3e-4356-a424-291ca1ae01ba/list-box-how-put-all-unselected-items-in-a-textbox
             'List0_BeforeUpdate(x, lstSeatLocations)
             If lstSeatLocations.GetSelected(x) = False Then
                 ''maybe put this on top and then you can set the stepper to 4
