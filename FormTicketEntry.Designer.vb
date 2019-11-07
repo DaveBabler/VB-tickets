@@ -52,8 +52,8 @@ Partial Class frmTicketEntryMain
         Me.ResetAllDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ElementHost1 = New System.Windows.Forms.Integration.ElementHost()
-        Me.Ucwpf1 = New Tickets.UCWPF()
+        Me.eleHost = New System.Windows.Forms.Integration.ElementHost()
+        Me.Ucwpf2 = New Tickets.UCWPF()
         Me.tbllyQuantity.SuspendLayout()
         Me.mnuStripMain.SuspendLayout()
         Me.SuspendLayout()
@@ -357,14 +357,14 @@ Partial Class frmTicketEntryMain
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem.Text = "&About"
         '
-        'ElementHost1
+        'eleHost
         '
-        Me.ElementHost1.Location = New System.Drawing.Point(629, 27)
-        Me.ElementHost1.Name = "ElementHost1"
-        Me.ElementHost1.Size = New System.Drawing.Size(433, 384)
-        Me.ElementHost1.TabIndex = 14
-        Me.ElementHost1.Text = "ElementHost1"
-        Me.ElementHost1.Child = Me.Ucwpf1
+        Me.eleHost.Location = New System.Drawing.Point(629, 27)
+        Me.eleHost.Name = "eleHost"
+        Me.eleHost.Size = New System.Drawing.Size(433, 384)
+        Me.eleHost.TabIndex = 14
+        Me.eleHost.Text = "ElementHost1"
+        Me.eleHost.Child = Me.Ucwpf2
         '
         'frmTicketEntryMain
         '
@@ -372,7 +372,7 @@ Partial Class frmTicketEntryMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(1203, 450)
-        Me.Controls.Add(Me.ElementHost1)
+        Me.Controls.Add(Me.eleHost)
         Me.Controls.Add(Me.lblSubtotalOut)
         Me.Controls.Add(Me.lblSubtotal)
         Me.Controls.Add(Me.btnExit)
@@ -426,6 +426,7 @@ Partial Class frmTicketEntryMain
     Friend WithEvents ResetAllDataToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ElementHost1 As Integration.ElementHost
+    Friend WithEvents eleHost As Integration.ElementHost
     Friend Ucwpf1 As UCWPF
+    Friend Ucwpf2 As UCWPF
 End Class

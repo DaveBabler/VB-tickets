@@ -144,4 +144,7 @@ Public Class frmTicketEntryMain
         End If
     End Sub
 
+    Private Sub ElementHost1_ChildChanged(sender As Object, e As Integration.ChildChangedEventArgs) Handles eleHost.ChildChanged
+
+    End Sub
 End Class
