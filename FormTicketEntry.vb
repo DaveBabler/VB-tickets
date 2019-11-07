@@ -26,6 +26,8 @@ Public Class frmTicketEntryMain
     Public strSectionNames As String() = {"Orchestra", "Mezzanine", "General", "Balcony"}
     Public decPrices As Decimal() = {40.0, 27.5, 15.0, 10.0}
     Private Sub frmTicketEntryMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        GlobalClass.PopulateStrDecDictionary(Me.strSectionNames, Me.decPrices, GlobalClass.dicSeatingPrices)
         'Dictionary is populated on splash screen!!!!
         GlobalClass.PopulateListBoxWithDictionary(lstSeatLocations, GlobalClass.dicSeatingPrices)
     End Sub

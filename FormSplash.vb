@@ -1,5 +1,11 @@
 ﻿Public NotInheritable Class FormSplash
+    '<STAThread()>
+    'Shared Sub Main(args As String())
+    '    FormSplash.BackGroundStartLoading()
 
+
+
+    'End Sub
     'TODO: This form can easily be set as the splash screen for the application by going to the "Application" tab
     '  of the Project Designer ("Properties" under the "Project" menu).
 
@@ -11,6 +17,7 @@
         '  properties dialog (under the "Project" menu).
 
         'Application title
+
         If My.Application.Info.Title <> "" Then
             ApplicationTitle.Text = My.Application.Info.Title
         Else
@@ -31,7 +38,9 @@
         'Copyright info
         Copyright.Text = My.Application.Info.Copyright &
             vbCrLf & "Author: " & My.Application.Info.CompanyName
-        BackGroundStartLoading()
+
+
+
 
     End Sub
 
