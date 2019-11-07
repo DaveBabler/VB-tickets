@@ -4,14 +4,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Tickets"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+             mc:Ignorable="d" Height="97.059" Width="126.891">
+    <Grid Width="130" Height="85" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="19*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="287*"/>
             <RowDefinition Height="163*"/>
         </Grid.RowDefinitions>
-        <ListBox x:Name="lstwpfSeating" HorizontalAlignment="Left" Height="100" Margin="25,10,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListBox x:Name="lstwpfSeating" HorizontalAlignment="Left" Height="85" VerticalAlignment="Top" Width="120" Background="Gainsboro" Foreground="#FF5A0048" FontWeight="Bold" FontFamily="/Tickets;component/Resources/#Noto Sans Lao" SelectionMode="Multiple" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
 
     </Grid>
 </UserControl>

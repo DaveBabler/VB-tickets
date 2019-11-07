@@ -359,9 +359,11 @@ Partial Class frmTicketEntryMain
         '
         'eleHost
         '
-        Me.eleHost.Location = New System.Drawing.Point(629, 27)
+        Me.eleHost.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.eleHost.Location = New System.Drawing.Point(706, 108)
+        Me.eleHost.Margin = New System.Windows.Forms.Padding(0)
         Me.eleHost.Name = "eleHost"
-        Me.eleHost.Size = New System.Drawing.Size(433, 384)
+        Me.eleHost.Size = New System.Drawing.Size(128, 96)
         Me.eleHost.TabIndex = 14
         Me.eleHost.Text = "ElementHost1"
         Me.eleHost.Child = Me.Ucwpf2
