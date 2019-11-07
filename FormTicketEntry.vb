@@ -19,6 +19,10 @@
 'hiding table layout panel columns & rows https://stackoverflow.com/questions/3290414/hide-and-show-a-cell-of-the-tablelayoutpanel
 
 Public Class frmTicketEntryMain
+    Dim strLastActiveSelects(4) As String
+    Dim strCurrActiveSelects(4) As String
+    Dim intFlag As Integer = 0 'flag test
+
     Public strSectionNames As String() = {"Orchestra", "Mezzanine", "General", "Balcony"}
     Public decPrices As Decimal() = {40.0, 27.5, 15.0, 10.0}
     Private Sub frmTicketEntryMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -30,32 +34,66 @@ Public Class frmTicketEntryMain
         ''''TESTING METHOD!
         '''
         '''
+        Array.Clear(strLastActiveSelects, 0, 4)
+
 
 
         Debug.Print(lstSeatLocations.Items.Count)
         For x = 0 To lstSeatLocations.SelectedItems.Count() - 1
+
             For Each ob In lstSeatLocations.SelectedIndices
                 If CInt(ob) = x Then
-                    Console.WriteLine("We have {0:N} as ob and {1:N} as x", ob, x)
+                    Console.WriteLine("We have  {0:N} as ob and {1:N} as x", ob, x)
+                    ' intLastActiveIndexes.Concat(ob).ToArray
+                    Console.WriteLine("Nex should be like the array or what")
+                    '   Console.WriteLine(intLastActiveIndexes(x).ToString())
                 End If
 
             Next ob
 
             If lstSeatLocations.SelectedItems.Count() > 0 Then
+                If intFlag > 0 Then
+                    strLastActiveSelects = strCurrActiveSelects
+                End If
+
+
+
+                Dim strSelectedValue As String
+                strSelectedValue = lstSeatLocations.SelectedItems(x).ToString()
+                Console.WriteLine("We just assigned the variable of " & strSelectedValue)
+                strCurrActiveSelects(x) = strSelectedValue
+
+                For p = 0 To strLastActiveSelects.Count - 1
+                    Console.WriteLine(strLastActiveSelects(p) & " <<<from Array  |||  from from current >>>" & strCurrActiveSelects(p))
+                Next p
+
+                If strLastActiveSelects.Contains(strSelectedValue) Then
+                    'Do nothing!
+                Else
+                    GlobalClass.CheckLabels(Me, strSelectedValue, True, False)
+                End If
 
                 Console.WriteLine(lstSeatLocations.SelectedItems(x).ToString())
-                GlobalClass.CheckLabels(Me, lstSeatLocations.SelectedItems(x).ToString(), False, True)
+                GlobalClass.CheckLabels(Me, strSelectedValue, False, True)
+                Array.Clear(strCurrActiveSelects, 0, 4)
+            Else
+                intFlag += 1
+
             End If
-            List0_BeforeUpdate(x, lstSeatLocations)
+
+            'List0_BeforeUpdate(x, lstSeatLocations)
             If lstSeatLocations.GetSelected(x) = False Then
-                Console.WriteLine("HEY FAGGOT " & x & "has been unselcted YOU SLUTWHOREAIDS!")
+                ''maybe put this on top and then you can set the stepper to 4
             End If
         Next x
 
+
+
+
+
+
         ''''END TESTING METHOD
     End Sub
-
-
 
     Private Sub btnAddQuantities_Click(sender As Object, e As EventArgs) Handles btnAddQuantities.Click
 
@@ -74,12 +112,21 @@ Public Class frmTicketEntryMain
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-
+        GlobalClass.CheckLabels(Me, "Orchestra", True, False)
 
     End Sub
 
+    Private Sub CheckThatSelect(strForComparison As String, strArrayToLookIn As String())
+        'In theory this will hide selections based on assumed variables but it's 20 minutes before the assignment is due and I'm exhausted
+        If strArrayToLookIn.Contains(strForComparison) Then
+            Console.WriteLine("It's in there!")
+        Else
+            GlobalClass.CheckLabels(Me, strForComparison, True, False)
+        End If
 
+    End Sub
     Private Sub List0_BeforeUpdate(Cancel As Integer, ByVal List0 As ListBox)
+        ''This should have worked but it did not!!!!
         Dim varItem As Object, bolItemSelected As Boolean
         For Each varItem In List0.SelectedItems
 
