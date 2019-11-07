@@ -19,8 +19,9 @@
 'hiding table layout panel columns & rows https://stackoverflow.com/questions/3290414/hide-and-show-a-cell-of-the-tablelayoutpanel
 
 Public Class frmTicketEntryMain
-    Dim strLastActiveSelects(4) As String
-    Dim strCurrActiveSelects(4) As String
+    Dim strLastActiveSelects(3) As String
+    Dim strCurrActiveSelects(3) As String
+    Dim strNotSelcted As String
     Dim intFlag As Integer = 0 'flag test
 
     Public strSectionNames As String() = {"Orchestra", "Mezzanine", "General", "Balcony"}
@@ -39,56 +40,73 @@ Public Class frmTicketEntryMain
 
 
         Debug.Print(lstSeatLocations.Items.Count)
-        For x = 0 To lstSeatLocations.SelectedItems.Count() - 1
+        'For x = 0 To lstSeatLocations.SelectedItems.Count() - 1
 
-            For Each ob In lstSeatLocations.SelectedIndices
-                If CInt(ob) = x Then
-                    Console.WriteLine("We have  {0:N} as ob and {1:N} as x", ob, x)
-                    ' intLastActiveIndexes.Concat(ob).ToArray
-                    Console.WriteLine("Nex should be like the array or what")
-                    '   Console.WriteLine(intLastActiveIndexes(x).ToString())
-                End If
+        '    For Each ob In lstSeatLocations.SelectedIndices
+        '        If CInt(ob) = x Then
+        '            Console.WriteLine("We have  {0:N} as ob and {1:N} as x", ob, x)
+        '            ' intLastActiveIndexes.Concat(ob).ToArray
+        '            Console.WriteLine("Nex should be like the array or what")
+        '            '   Console.WriteLine(intLastActiveIndexes(x).ToString())
+        '        End If
 
-            Next ob
+        '    Next ob
 
-            If lstSeatLocations.SelectedItems.Count() > 0 Then
-                If intFlag > 0 Then
-                    strLastActiveSelects = strCurrActiveSelects
-                End If
+        '    If lstSeatLocations.SelectedItems.Count() > 0 Then
+        '        If intFlag > 0 Then
+        '            strLastActiveSelects = strCurrActiveSelects
+        '        End If
 
 
 
-                Dim strSelectedValue As String
-                strSelectedValue = lstSeatLocations.SelectedItems(x).ToString()
-                Console.WriteLine("We just assigned the variable of " & strSelectedValue)
-                strCurrActiveSelects(x) = strSelectedValue
+        '        Dim strSelectedValue As String
+        '        strSelectedValue = lstSeatLocations.SelectedItems(x).ToString()
+        '        Console.WriteLine("We just assigned the variable of " & strSelectedValue)
+        '        strCurrActiveSelects(x) = strSelectedValue
 
-                For p = 0 To strLastActiveSelects.Count - 1
-                    Console.WriteLine(strLastActiveSelects(p) & " <<<from Array  |||  from from current >>>" & strCurrActiveSelects(p))
-                Next p
+        '        For p = 0 To strLastActiveSelects.Count - 1
+        '            Console.WriteLine(strLastActiveSelects(p) & " <<<from Array  |||  from from current >>>" & strCurrActiveSelects(p))
+        '        Next p
 
-                If strLastActiveSelects.Contains(strSelectedValue) Then
-                    'Do nothing!
-                Else
-                    GlobalClass.CheckLabels(Me, strSelectedValue, True, False)
-                End If
+        '        If strLastActiveSelects.Contains(strSelectedValue) Then
+        '            'Do nothing!
+        '        Else
+        '            GlobalClass.CheckLabels(Me, strSelectedValue, True, False)
+        '        End If
 
-                Console.WriteLine(lstSeatLocations.SelectedItems(x).ToString())
+        '        Console.WriteLine(lstSeatLocations.SelectedItems(x).ToString())
+        '        GlobalClass.CheckLabels(Me, strSelectedValue, False, True)
+        '        Array.Clear(strCurrActiveSelects, 0, 4)
+
+        '        intFlag += 1
+
+        '    End If
+
+        ''''try this https://social.msdn.microsoft.com/Forums/en-US/e7b42e0b-1c3e-4356-a424-291ca1ae01ba/list-box-how-put-all-unselected-items-in-a-textbox
+        'List0_BeforeUpdate(x, lstSeatLocations)
+        'If lstSeatLocations.GetSelected(x) = False Then
+        '        ''maybe put this on top and then you can set the stepper to 4
+        '    End If
+        'Next x
+        Dim strUnselected As String = ""
+        Dim strSelectedValue As String = ""
+        For i As Integer = 0 To lstSeatLocations.Items.Count - 1
+            If lstSeatLocations.SelectedIndices.Contains(i) Then
+                strSelectedValue = lstSeatLocations.Items(i).ToString()
                 GlobalClass.CheckLabels(Me, strSelectedValue, False, True)
-                Array.Clear(strCurrActiveSelects, 0, 4)
+            End If
 
-                intFlag += 1
+
+            If Not lstSeatLocations.SelectedIndices.Contains(i) Then
+                '  Console.WriteLine("Not Selected" & i.ToString() & " the value is: " & lstSeatLocations.Items(i).ToString())
+
+                strUnselected = lstSeatLocations.Items(i).ToString()
+                GlobalClass.CheckLabels(Me, strUnselected, True, False)
+
 
             End If
 
-            ''''try this https://social.msdn.microsoft.com/Forums/en-US/e7b42e0b-1c3e-4356-a424-291ca1ae01ba/list-box-how-put-all-unselected-items-in-a-textbox
-            'List0_BeforeUpdate(x, lstSeatLocations)
-            If lstSeatLocations.GetSelected(x) = False Then
-                ''maybe put this on top and then you can set the stepper to 4
-            End If
-        Next x
-
-
+        Next
 
 
 
