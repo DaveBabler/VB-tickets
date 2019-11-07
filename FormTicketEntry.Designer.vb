@@ -59,7 +59,7 @@ Partial Class frmTicketEntryMain
         'btnAddQuantities
         '
         Me.btnAddQuantities.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnAddQuantities.Font = New System.Drawing.Font("Noto Sans", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.btnAddQuantities.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold)
         Me.btnAddQuantities.ForeColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.btnAddQuantities.Location = New System.Drawing.Point(444, 343)
         Me.btnAddQuantities.Name = "btnAddQuantities"
@@ -71,35 +71,35 @@ Partial Class frmTicketEntryMain
         'lstSeatLocations
         '
         Me.lstSeatLocations.BackColor = System.Drawing.Color.Gainsboro
-        Me.lstSeatLocations.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lstSeatLocations.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstSeatLocations.ForeColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.lstSeatLocations.FormattingEnabled = True
-        Me.lstSeatLocations.ItemHeight = 21
+        Me.lstSeatLocations.ItemHeight = 16
         Me.lstSeatLocations.Items.AddRange(New Object() {"dddd", "sss", "fffff"})
         Me.lstSeatLocations.Location = New System.Drawing.Point(12, 247)
         Me.lstSeatLocations.Name = "lstSeatLocations"
         Me.lstSeatLocations.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
-        Me.lstSeatLocations.Size = New System.Drawing.Size(116, 88)
+        Me.lstSeatLocations.Size = New System.Drawing.Size(116, 84)
         Me.lstSeatLocations.TabIndex = 1
         '
         'txtTicketPurchaser
         '
         Me.txtTicketPurchaser.BackColor = System.Drawing.Color.Gainsboro
-        Me.txtTicketPurchaser.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.txtTicketPurchaser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold)
         Me.txtTicketPurchaser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.txtTicketPurchaser.Location = New System.Drawing.Point(166, 133)
         Me.txtTicketPurchaser.Name = "txtTicketPurchaser"
-        Me.txtTicketPurchaser.Size = New System.Drawing.Size(211, 29)
+        Me.txtTicketPurchaser.Size = New System.Drawing.Size(211, 22)
         Me.txtTicketPurchaser.TabIndex = 2
         '
         'lblTicketPurchaser
         '
         Me.lblTicketPurchaser.AutoSize = True
-        Me.lblTicketPurchaser.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTicketPurchaser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTicketPurchaser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblTicketPurchaser.Location = New System.Drawing.Point(19, 141)
         Me.lblTicketPurchaser.Name = "lblTicketPurchaser"
-        Me.lblTicketPurchaser.Size = New System.Drawing.Size(141, 21)
+        Me.lblTicketPurchaser.Size = New System.Drawing.Size(129, 16)
         Me.lblTicketPurchaser.TabIndex = 3
         Me.lblTicketPurchaser.Text = "Ticket Purchaser:"
         Me.lblTicketPurchaser.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -129,11 +129,11 @@ Partial Class frmTicketEntryMain
         '
         'txtQtyOrchestra
         '
-        Me.txtQtyOrchestra.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.txtQtyOrchestra.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold)
         Me.txtQtyOrchestra.ForeColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.txtQtyOrchestra.Location = New System.Drawing.Point(112, 108)
         Me.txtQtyOrchestra.Name = "txtQtyOrchestra"
-        Me.txtQtyOrchestra.Size = New System.Drawing.Size(57, 29)
+        Me.txtQtyOrchestra.Size = New System.Drawing.Size(57, 22)
         Me.txtQtyOrchestra.TabIndex = 15
         Me.txtQtyOrchestra.Text = "888"
         Me.txtQtyOrchestra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -141,11 +141,11 @@ Partial Class frmTicketEntryMain
         '
         'txtQtyMezzanine
         '
-        Me.txtQtyMezzanine.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.txtQtyMezzanine.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold)
         Me.txtQtyMezzanine.ForeColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.txtQtyMezzanine.Location = New System.Drawing.Point(112, 73)
         Me.txtQtyMezzanine.Name = "txtQtyMezzanine"
-        Me.txtQtyMezzanine.Size = New System.Drawing.Size(57, 29)
+        Me.txtQtyMezzanine.Size = New System.Drawing.Size(57, 22)
         Me.txtQtyMezzanine.TabIndex = 14
         Me.txtQtyMezzanine.Text = "888"
         Me.txtQtyMezzanine.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -153,11 +153,11 @@ Partial Class frmTicketEntryMain
         '
         'txtQtyGeneral
         '
-        Me.txtQtyGeneral.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.txtQtyGeneral.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold)
         Me.txtQtyGeneral.ForeColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.txtQtyGeneral.Location = New System.Drawing.Point(112, 38)
         Me.txtQtyGeneral.Name = "txtQtyGeneral"
-        Me.txtQtyGeneral.Size = New System.Drawing.Size(57, 29)
+        Me.txtQtyGeneral.Size = New System.Drawing.Size(57, 22)
         Me.txtQtyGeneral.TabIndex = 13
         Me.txtQtyGeneral.Text = "888"
         Me.txtQtyGeneral.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -167,11 +167,11 @@ Partial Class frmTicketEntryMain
         '
         Me.lblQtyBalcony.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblQtyBalcony.AutoSize = True
-        Me.lblQtyBalcony.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblQtyBalcony.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblQtyBalcony.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblQtyBalcony.Location = New System.Drawing.Point(31, 7)
+        Me.lblQtyBalcony.Location = New System.Drawing.Point(38, 9)
         Me.lblQtyBalcony.Name = "lblQtyBalcony"
-        Me.lblQtyBalcony.Size = New System.Drawing.Size(75, 21)
+        Me.lblQtyBalcony.Size = New System.Drawing.Size(68, 16)
         Me.lblQtyBalcony.TabIndex = 8
         Me.lblQtyBalcony.Text = "Balcony:"
         Me.lblQtyBalcony.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -181,11 +181,11 @@ Partial Class frmTicketEntryMain
         '
         Me.lblQtyGeneral.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblQtyGeneral.AutoSize = True
-        Me.lblQtyGeneral.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblQtyGeneral.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblQtyGeneral.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblQtyGeneral.Location = New System.Drawing.Point(32, 42)
+        Me.lblQtyGeneral.Location = New System.Drawing.Point(39, 44)
         Me.lblQtyGeneral.Name = "lblQtyGeneral"
-        Me.lblQtyGeneral.Size = New System.Drawing.Size(74, 21)
+        Me.lblQtyGeneral.Size = New System.Drawing.Size(67, 16)
         Me.lblQtyGeneral.TabIndex = 9
         Me.lblQtyGeneral.Text = "General:"
         Me.lblQtyGeneral.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -195,11 +195,11 @@ Partial Class frmTicketEntryMain
         '
         Me.lblQtyMezzanine.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblQtyMezzanine.AutoSize = True
-        Me.lblQtyMezzanine.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblQtyMezzanine.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblQtyMezzanine.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblQtyMezzanine.Location = New System.Drawing.Point(10, 77)
+        Me.lblQtyMezzanine.Location = New System.Drawing.Point(21, 79)
         Me.lblQtyMezzanine.Name = "lblQtyMezzanine"
-        Me.lblQtyMezzanine.Size = New System.Drawing.Size(96, 21)
+        Me.lblQtyMezzanine.Size = New System.Drawing.Size(85, 16)
         Me.lblQtyMezzanine.TabIndex = 10
         Me.lblQtyMezzanine.Text = "Mezzanine:"
         Me.lblQtyMezzanine.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -209,11 +209,11 @@ Partial Class frmTicketEntryMain
         '
         Me.lblQtyOrchestra.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblQtyOrchestra.AutoSize = True
-        Me.lblQtyOrchestra.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblQtyOrchestra.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblQtyOrchestra.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblQtyOrchestra.Location = New System.Drawing.Point(16, 113)
+        Me.lblQtyOrchestra.Location = New System.Drawing.Point(27, 115)
         Me.lblQtyOrchestra.Name = "lblQtyOrchestra"
-        Me.lblQtyOrchestra.Size = New System.Drawing.Size(90, 21)
+        Me.lblQtyOrchestra.Size = New System.Drawing.Size(79, 16)
         Me.lblQtyOrchestra.TabIndex = 11
         Me.lblQtyOrchestra.Text = "Orchestra:"
         Me.lblQtyOrchestra.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -221,11 +221,11 @@ Partial Class frmTicketEntryMain
         '
         'txtQtyBalcony
         '
-        Me.txtQtyBalcony.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.txtQtyBalcony.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold)
         Me.txtQtyBalcony.ForeColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.txtQtyBalcony.Location = New System.Drawing.Point(112, 3)
         Me.txtQtyBalcony.Name = "txtQtyBalcony"
-        Me.txtQtyBalcony.Size = New System.Drawing.Size(57, 29)
+        Me.txtQtyBalcony.Size = New System.Drawing.Size(57, 22)
         Me.txtQtyBalcony.TabIndex = 12
         Me.txtQtyBalcony.Text = "888"
         Me.txtQtyBalcony.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -244,7 +244,7 @@ Partial Class frmTicketEntryMain
         'btnClear
         '
         Me.btnClear.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnClear.Font = New System.Drawing.Font("Noto Sans", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold)
         Me.btnClear.ForeColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.btnClear.Location = New System.Drawing.Point(444, 273)
         Me.btnClear.Name = "btnClear"
@@ -256,7 +256,7 @@ Partial Class frmTicketEntryMain
         'btnExit
         '
         Me.btnExit.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnExit.Font = New System.Drawing.Font("Noto Sans", 9.749999!, System.Drawing.FontStyle.Bold)
+        Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold)
         Me.btnExit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.btnExit.Location = New System.Drawing.Point(444, 205)
         Me.btnExit.Name = "btnExit"
@@ -280,11 +280,11 @@ Partial Class frmTicketEntryMain
         '
         Me.lblSubtotalOut.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblSubtotalOut.AutoSize = True
-        Me.lblSubtotalOut.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSubtotalOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSubtotalOut.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.lblSubtotalOut.Location = New System.Drawing.Point(321, 405)
         Me.lblSubtotalOut.Name = "lblSubtotalOut"
-        Me.lblSubtotalOut.Size = New System.Drawing.Size(112, 31)
+        Me.lblSubtotalOut.Size = New System.Drawing.Size(93, 24)
         Me.lblSubtotalOut.TabIndex = 12
         Me.lblSubtotalOut.Text = "$8888.88"
         Me.lblSubtotalOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -339,7 +339,7 @@ Partial Class frmTicketEntryMain
         'ResetAllDataToolStripMenuItem
         '
         Me.ResetAllDataToolStripMenuItem.Name = "ResetAllDataToolStripMenuItem"
-        Me.ResetAllDataToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ResetAllDataToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.ResetAllDataToolStripMenuItem.Text = "&Reset All Data"
         '
         'HelpToolStripMenuItem
@@ -352,7 +352,7 @@ Partial Class frmTicketEntryMain
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem.Text = "&About"
         '
         'frmTicketEntryMain

@@ -31,11 +31,16 @@
         'Copyright info
         Copyright.Text = My.Application.Info.Copyright &
             vbCrLf & "Author: " & My.Application.Info.CompanyName
+        BackGroundStartLoading()
+
+    End Sub
+
+    Private Sub BackGroundStartLoading()
+        ' This sub collates and loads various datastructures needed for the program during the splash screen so everything is ready to go when the forms load.
+        ' A larger program would probably have some more stuff going on here but for this program populating the dictionary is sufficent.
+        GlobalClass.PopulateStrDecDictionary(frmTicketEntryMain.strSectionNames, frmTicketEntryMain.decPrices, GlobalClass.dicSeatingPrices)
     End Sub
 
 
 
-    Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
 End Class

@@ -68,9 +68,9 @@ Partial Class FormSplash
         Me.ApplicationTitle.AutoSize = True
         Me.ApplicationTitle.Font = New System.Drawing.Font("Semplicita", 25.0!, System.Drawing.FontStyle.Bold)
         Me.ApplicationTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(121, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ApplicationTitle.Location = New System.Drawing.Point(64, 203)
+        Me.ApplicationTitle.Location = New System.Drawing.Point(78, 203)
         Me.ApplicationTitle.Name = "ApplicationTitle"
-        Me.ApplicationTitle.Size = New System.Drawing.Size(181, 88)
+        Me.ApplicationTitle.Size = New System.Drawing.Size(167, 88)
         Me.ApplicationTitle.TabIndex = 0
         Me.ApplicationTitle.Text = "Program Name"
         Me.ApplicationTitle.TextAlign = System.Drawing.ContentAlignment.TopRight
