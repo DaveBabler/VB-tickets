@@ -76,6 +76,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayManipulation.vb" />
     <Compile Include="CumulativeTicketSummary.Designer.vb">
       <DependentUpon>CumulativeTicketSummary.vb</DependentUpon>
     </Compile>

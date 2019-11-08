@@ -103,6 +103,7 @@ Public Class frmTicketEntryMain
 
 
         GlobalClass.ClearLabelsOnTblLyOut(strSectionNames, TicketSummary.tblyTicketSummary)
+
     End Sub
 
 

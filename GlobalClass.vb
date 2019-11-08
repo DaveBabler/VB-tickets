@@ -131,7 +131,7 @@
                     For q As Integer = 0 To strArray.Count - 1
                         strValue = strArray(q)
                         If lb.Name.Contains(strValue) Then
-                            lb.Text = "BUTTWHORES!!!"
+                            lb.Text = ""
                         End If
                     Next q
 
