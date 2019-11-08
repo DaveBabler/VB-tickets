@@ -19,10 +19,7 @@
 'hiding table layout panel columns & rows https://stackoverflow.com/questions/3290414/hide-and-show-a-cell-of-the-tablelayoutpanel
 
 Public Class frmTicketEntryMain
-    Dim strLastActiveSelects(3) As String
-    Dim strCurrActiveSelects(3) As String
-    Dim strNotSelcted As String
-    Dim intFlag As Integer = 0 'flag test
+
 
     Public strSectionNames As String() = {"Orchestra", "Mezzanine", "General", "Balcony"}
     Public decPrices As Decimal() = {40.0, 27.5, 15.0, 10.0}
@@ -61,7 +58,14 @@ Public Class frmTicketEntryMain
 
     End Sub
 
-    Private Sub btnAddQuantities_Click(sender As Object, e As EventArgs) Handles btnAddQuantities.Click
+    Private Sub btnConfirmQty_Click(sender As Object, e As EventArgs) Handles btnConfirmQty.Click
+        If txtTicketPurchaser.Text = "" Then
+            GlobalClass.UserErrorMessage("You must enter in the purchaser's name to proceed", "Please fill in the form!")
+            txtTicketPurchaser.Focus()
+
+        Else
+
+        End If
 
         Console.WriteLine("{0:C}", decPrices(1))
         For Each pair In GlobalClass.dicSeatingPrices
@@ -74,37 +78,31 @@ Public Class frmTicketEntryMain
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-
+        Dim ctrl As Control
+        For Each ctrl In Me.Controls
+            If (ctrl.GetType() Is GetType(TextBox)) Then
+                Dim txt As TextBox = CType(ctrl, TextBox)
+                txt.Clear()
+            End If
+        Next
+        txtQtyOrchestra.Clear()
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        GlobalClass.CheckLabels(Me, "Orchestra", True, False)
+        Dim fart(3) As Decimal
+        fart(0) = 2
+        fart(1) = 3
+        fart(2) = 4
+        GlobalClass.ArrayEndTotal(fart)
+        Console.WriteLine("I'm farting " & fart(3).ToString())
 
     End Sub
 
-    Private Sub CheckThatSelect(strForComparison As String, strArrayToLookIn As String())
-        'In theory this will hide selections based on assumed variables but it's 20 minutes before the assignment is due and I'm exhausted
-        If strArrayToLookIn.Contains(strForComparison) Then
-            Console.WriteLine("It's in there!")
-        Else
-            GlobalClass.CheckLabels(Me, strForComparison, True, False)
-        End If
-
-    End Sub
-    Private Sub List0_BeforeUpdate(Cancel As Integer, ByVal List0 As ListBox)
-        ''This should have worked but it did not!!!!
-        Dim varItem As Object, bolItemSelected As Boolean
-        For Each varItem In List0.SelectedItems
-
-            If varItem = List0.SelectedItem Then
-                bolItemSelected = True
-            End If
-        Next
-        If bolItemSelected Then
-            Console.WriteLine("You just selected the item.")
-        Else
-            Console.WriteLine("You just unselected the item.")
-        End If
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        frmAbout.ShowDialog()
     End Sub
 
+    Private Sub btnConfirmQty_MouseHover(sender As Object, e As EventArgs) Handles btnConfirmQty.MouseHover
+        GlobalClass.ButtonFlash(btnConfirmQty)
+    End Sub
 End Class

@@ -1,4 +1,5 @@
 ﻿Public Class GlobalClass
+    Public Shared decTotalGroupWGrandTotal(4) As Decimal 'yes I know you'd think it should be 3 but I'm putting in the grand total as well, for fun!
     Public Shared dicSeatingPrices As New Dictionary(Of String, Decimal)
     Public Shared tblLayout As TableLayoutPanel 'this exists only to shut up the optional paramaters of a sub
     Public Shared Sub PopulateStrDecDictionary(ByVal strArray As String(), ByVal decArray As Decimal(), ByRef dicPopulated As Dictionary(Of String, Decimal))
@@ -27,25 +28,26 @@
         Next
     End Sub
 
-    Public Shared Sub ShowTblRowsBasedOnString(ByVal strLookup As String)
-        'In theory this will display or hide table rows based upon the name passed on a dictionary 
-        'this name should be part of the labels name on the form 
-        'the index should correspond to the dictionary assuming the developer put things in alphabetical order
-        'which means it can be used to hide table rows.
+    'Public Shared Sub ShowTblRowsBasedOnString(ByVal strLookup As String)
+    ''DEPRECIATED!!!! 
+    '    'In theory this will display or hide table rows based upon the name passed on a dictionary 
+    '    'this name should be part of the labels name on the form 
+    '    'the index should correspond to the dictionary assuming the developer put things in alphabetical order
+    '    'which means it can be used to hide table rows.
 
 
-        For Each label In frmTicketEntryMain.Controls.OfType(Of Label).Where(Function(x) x.Name.Contains(strLookup))  'lambda expressions, which I only kinda sorta understand  
-            If label.Visible = False Then
-                label.Visible = True
-            End If
-        Next
+    '    For Each label In frmTicketEntryMain.Controls.OfType(Of Label).Where(Function(x) x.Name.Contains(strLookup))  'lambda expressions, which I only kinda sorta understand  
+    '        If label.Visible = False Then
+    '            label.Visible = True
+    '        End If
+    '    Next
 
-        For Each txtBox In frmTicketEntryMain.Controls.OfType(Of TextBox).Where(Function(f) f.Name.Contains(strLookup))
-            If txtBox.Visible = False Then
-                txtBox.Visible = True
-            End If
-        Next
-    End Sub
+    '    For Each txtBox In frmTicketEntryMain.Controls.OfType(Of TextBox).Where(Function(f) f.Name.Contains(strLookup))
+    '        If txtBox.Visible = False Then
+    '            txtBox.Visible = True
+    '        End If
+    '    Next
+    'End Sub
     Public Shared Sub CheckLabels(Container As Control, Value As String, ByRef blCurrentState As Boolean, ByRef blDesiredState As Boolean)
         'This sub checks Controls to see if they contain a specific string in their assigned name
         'Then if switches their visibility if their visibility is in an undesired state. 
@@ -71,8 +73,84 @@
             End If
         Next
     End Sub
+    Public Shared Sub ClearAllTextLabel(ByRef ctrlContainer As Control, ByVal strLbTxtOrBoth As String, ByVal arrOfNames As String() )
+        Dim strValue As String = ""
+        For i = 0 To arrOfNames.Count() - 1
+            strValue = arrOfNames(i)  'for clarity 
+            If strLbTxtOrBoth = "Both" Then
+                ClearLabelTextByChunk(ctrlContainer, strValue)
+                ClearTextBoxTextByChunk(ctrlContainer, strValue)
+            ElseIf strLbTxtOrBoth = "Label" Then
+                ClearLabelTextByChunk(ctrlContainer, strValue)
+            ElseIf strLbTxtOrBoth = "TextBox" Then
+                ClearTextBoxTextByChunk(ctrlContainer, strValue)
+                'No Plain "Else" I don't want any accidents on implementation
 
+            End If
+
+        Next i
+
+    End Sub
+
+    Public Shared Sub ClearLabelTextByChunk(ByRef ctrlContainer As Control, strValue As String)
+        'loops through and wipes labels if the label name has a specific string 
+        'I know we traditionally use lowercase for LCVs but Control is a much more powerful entity than an int so
+        'to future debuggers if you cry over this, I'm sorry this upsets you, but know you are loved.
+
+        For Each C As Control In ctrlContainer.Controls
+            If TypeOf C Is Label AndAlso CType(C, Label).Name.Contains(strValue) Then
+                C.Text = ""
+
+            ElseIf C.HasChildren Then
+                ClearLabelTextByChunk(ctrlContainer, strValue)
+            End If
+        Next C
+    End Sub
+
+    Public Shared Sub ClearTextBoxTextByChunk(ByRef ctrlContainer As Control, strValue As String)
+        'loops through and wipes TextBoxs if the TextBox name has a specific string 
+        'I know we traditionally use lowercase for LCVs but Control is a much more powerful entity than an int so
+        'to future debuggers if you cry over this, I'm sorry this upsets you, but know you are loved.
+
+        For Each C As Control In ctrlContainer.Controls
+            If TypeOf C Is TextBox AndAlso CType(C, TextBox).Name.Contains(strValue) Then
+                If TryCast(C, TextBox) IsNot Nothing Then
+                    TryCast(C, TextBox).Text = [String].Empty
+                End If
+
+            ElseIf C.HasChildren Then
+                ClearTextBoxTextByChunk(ctrlContainer, strValue)
+            End If
+        Next C
+    End Sub
+
+    Public Shared Sub ClearTextBox(parent As Control)
+
+        For Each child As Control In parent.Controls
+            ClearTextBox(child)
+        Next
+
+        If TryCast(parent, TextBox) IsNot Nothing Then
+            TryCast(parent, TextBox).Text = [String].Empty
+        End If
+
+    End Sub
+    Public Shared Sub ClearTextBox(parent As Control, strValue As String)
+
+        For Each child As Control In parent.Controls
+            If TypeOf child Is TextBox AndAlso CType(child, TextBox).Name.Contains(strValue) Then
+                ClearTextBox(child, strValue)
+            End If
+
+        Next
+
+        If TryCast(parent, TextBox) IsNot Nothing Then
+            TryCast(parent, TextBox).Text = ""
+        End If
+
+    End Sub
     Public Shared Sub ReduceTableLayoutRowPercent(ByRef tblLyToChange As TableLayoutPanel, ByVal intRowToModify As Integer, ByVal strDoWhat As String)
+        'THIS WAS SUPPOSED TO BE AWESOME IT WAS SUPPOSED TO ACTUALLY SMUSH THE LABELS TOGETHER BASED UPON SELECTS BUT NO IT WOULDN'T WORK!!!
         Dim decPercent As Decimal = 0.25D
         Dim intNewHeight = CInt(tblLyToChange.Height * decPercent)
         Dim intRow As Integer = intRowToModify
@@ -86,6 +164,24 @@
 
         End If
 
+
+    End Sub
+    Public Shared Sub ButtonFlash(ByRef btnToModify As Button)
+        'Switches the back and forecolor of a button
+        btnToModify.BackColor = Color.FromArgb(0, 204, 255)
+    End Sub
+
+    Public Shared Sub ArrayEndTotal(ByRef arrToTotal As Decimal())
+        'This subtotals an array and saves it in the last value of the array 
+        Dim decSubtotal = 0D
+        Dim i As Integer
+        For i = 0 To arrToTotal.Count() - 2
+
+            decSubtotal += arrToTotal(i)
+
+        Next i
+
+        arrToTotal(i) = decSubtotal
 
     End Sub
 
