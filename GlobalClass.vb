@@ -107,6 +107,44 @@
         Next C
     End Sub
 
+    Public Shared Sub ClearTableLabelTextByChunk(ByRef ctrlContainer As Control, strValue As String)
+        'loops through and wipes labels if the label name has a specific string 
+        'I know we traditionally use lowercase for LCVs but Control is a much more powerful entity than an int so
+        'to future debuggers if you cry over this, I'm sorry this upsets you, but know you are loved.
+
+        For Each C As Control In ctrlContainer.Controls
+            If TypeOf C Is Label AndAlso CType(C, Label).Name.Contains(strValue) Then
+                C.Text = ""
+
+            ElseIf C.HasChildren Then
+                ClearTableLabelTextByChunk(ctrlContainer, strValue)
+            End If
+        Next C
+    End Sub
+    Public Shared Sub ClearLabelsOnTblLyOut(ByVal strArray As String(), ByRef tblLayoutName As System.Windows.Forms.TableLayoutPanel)
+        Dim strValue As String = ""
+        For y As Integer = 0 To tblLayoutName.RowCount - 1
+            For x As Integer = 0 To tblLayoutName.ColumnCount - 1
+                Dim lb As Label = TryCast(tblLayoutName.GetControlFromPosition(x, y), Label)
+
+                If lb IsNot Nothing Then
+                    For q As Integer = 0 To strArray.Count - 1
+                        strValue = strArray(q)
+                        If lb.Name.Contains(strValue) Then
+                            lb.Text = "BUTTWHORES!!!"
+                        End If
+                    Next q
+
+                End If
+
+            Next x
+        Next y
+
+    End Sub
+
+
+
+
     Public Shared Sub ClearTextBoxTextByChunk(ByRef ctrlContainer As Control, strValue As String)
         'loops through and wipes TextBoxs if the TextBox name has a specific string 
         'I know we traditionally use lowercase for LCVs but Control is a much more powerful entity than an int so

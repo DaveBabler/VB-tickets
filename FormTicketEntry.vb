@@ -78,6 +78,8 @@ Public Class frmTicketEntryMain
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        TicketSummary.Show()
+        Dim strValue As String = "General"
         'Dim ctrl As Control
         'For Each ctrl In Me.Controls
         '    If (ctrl.GetType() Is GetType(TextBox)) Then
@@ -85,8 +87,26 @@ Public Class frmTicketEntryMain
         '        txt.Clear()
         '    End If
         'Next
-        GlobalClass.ClearAllTextLabel(Me, "TextBox", strSectionNames)
+        'GlobalClass.ClearAllTextLabel(Me, "TextBox", strSectionNames)  This works but let's try more
+        For y As Integer = 0 To TicketSummary.tblyTicketSummary.RowCount - 1
+
+            For x As Integer = 0 To TicketSummary.tblyTicketSummary.ColumnCount - 1
+                Dim lb As Label = TryCast(TicketSummary.tblyTicketSummary.GetControlFromPosition(x, y), Label)
+
+                If lb IsNot Nothing Then
+                    If lb.Name.Contains(strValue) Then
+                        lb.Text = "NOTHING"
+                    End If
+                End If
+            Next
+        Next
+
+
+        GlobalClass.ClearLabelsOnTblLyOut(strSectionNames, TicketSummary.tblyTicketSummary)
     End Sub
+
+
+
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         Dim fart(3) As Decimal
