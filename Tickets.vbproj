@@ -118,6 +118,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="tempshuffler.Designer.vb">
+      <DependentUpon>tempshuffler.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tempshuffler.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TicketSummary.Designer.vb">
       <DependentUpon>TicketSummary.vb</DependentUpon>
     </Compile>
@@ -143,6 +149,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tempshuffler.resx">
+      <DependentUpon>tempshuffler.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TicketSummary.resx">
       <DependentUpon>TicketSummary.vb</DependentUpon>
