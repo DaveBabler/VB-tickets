@@ -7,11 +7,12 @@
 
     Public Shared Function StringArrayPrefixer(strArrayToManipulate As String(), strPrefix As String) As String()
         Dim i As Integer
-        Dim intCount As Integer = strArrayToManipulate.Count()
+        Dim intCount As Integer = strArrayToManipulate.Count() - 1  'always subtract 1 when Dimming an array based on an array count!
         Dim strArrayOut(intCount) As String
-        For i = 0 To intCount - 1
+        For i = 0 To intCount
             strArrayOut(i) = strPrefix & strArrayToManipulate(i)
             Console.WriteLine("String Array value is " & strArrayOut(i))
+
         Next i
         Return strArrayOut
 
@@ -19,9 +20,9 @@
 
     Public Shared Function StringArraySuffixer(strArrayToManipulate As String(), strSuffix As String) As String()
         Dim i As Integer
-        Dim intCount As Integer = strArrayToManipulate.Count()
+        Dim intCount As Integer = strArrayToManipulate.Count() - 1 'always subtract 1 when Dimming an array based on an array count!
         Dim strArrayOut(intCount) As String
-        For i = 0 To intCount - 1
+        For i = 0 To intCount
             strArrayOut(i) = strArrayToManipulate(i) & strSuffix
             Console.WriteLine("String Array value is " & strArrayOut(i))
         Next i

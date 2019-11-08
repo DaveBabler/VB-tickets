@@ -102,7 +102,18 @@ Public Class frmTicketEntryMain
         Next
 
 
-        GlobalClass.ClearLabelsOnTblLyOut(strSectionNames, TicketSummary.tblyTicketSummary)
+
+
+
+        Dim intSectOrig As Integer = strSectionNames.Count() - 1  'don't forget to subtract 1 to dim the array holy god that was awful
+
+
+        Dim strSectionLabelsTicket(intSectOrig) As String
+
+        strSectionLabelsTicket = ArrayManipulation.StringArraySuffixer(strSectionNames, "Out")
+
+
+        GlobalClass.ClearLabelsOnTblLyOut(strSectionLabelsTicket, TicketSummary.tblyTicketSummary)
 
     End Sub
 
@@ -110,12 +121,7 @@ Public Class frmTicketEntryMain
 
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        Dim fart(3) As Decimal
-        fart(0) = 2
-        fart(1) = 3
-        fart(2) = 4
-        GlobalClass.ArrayEndTotal(fart)
-        Console.WriteLine("I'm farting " & fart(3).ToString())
+
 
     End Sub
 
