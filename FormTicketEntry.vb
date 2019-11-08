@@ -78,14 +78,14 @@ Public Class frmTicketEntryMain
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        Dim ctrl As Control
-        For Each ctrl In Me.Controls
-            If (ctrl.GetType() Is GetType(TextBox)) Then
-                Dim txt As TextBox = CType(ctrl, TextBox)
-                txt.Clear()
-            End If
-        Next
-        txtQtyOrchestra.Clear()
+        'Dim ctrl As Control
+        'For Each ctrl In Me.Controls
+        '    If (ctrl.GetType() Is GetType(TextBox)) Then
+        '        Dim txt As TextBox = CType(ctrl, TextBox)
+        '        txt.Clear()
+        '    End If
+        'Next
+        GlobalClass.ClearAllTextLabel(Me, "TextBox", strSectionNames)
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
