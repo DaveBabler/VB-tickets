@@ -104,6 +104,22 @@ Public Class frmTicketEntryMain
 
 
 
+        For y As Integer = 0 To Me.tbllyQuantity.RowCount - 1
+
+            For x As Integer = 0 To Me.tbllyQuantity.ColumnCount - 1
+                Dim tb As TextBox = TryCast(Me.tbllyQuantity.GetControlFromPosition(x, y), TextBox)
+
+                If tb IsNot Nothing Then
+
+                    tb.Text = "NOTHING"
+
+                End If
+            Next
+        Next
+
+
+
+
 
         Dim intSectOrig As Integer = strSectionNames.Count() - 1  'don't forget to subtract 1 to dim the array holy god that was awful
 
