@@ -51,9 +51,9 @@ Partial Class TicketSummary
         Me.tblyTicketSummary.SetColumnSpan(Me.lblTicketHeader, 2)
         Me.lblTicketHeader.Font = New System.Drawing.Font("Madonna", 40.0!, System.Drawing.FontStyle.Bold)
         Me.lblTicketHeader.ForeColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblTicketHeader.Location = New System.Drawing.Point(17, 0)
+        Me.lblTicketHeader.Location = New System.Drawing.Point(20, 0)
         Me.lblTicketHeader.Name = "lblTicketHeader"
-        Me.lblTicketHeader.Size = New System.Drawing.Size(545, 120)
+        Me.lblTicketHeader.Size = New System.Drawing.Size(540, 120)
         Me.lblTicketHeader.TabIndex = 0
         Me.lblTicketHeader.Text = "Madonna Tickets " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Receipt"
         Me.lblTicketHeader.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -101,10 +101,10 @@ Partial Class TicketSummary
         '
         Me.lblSummaryForNameLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblSummaryForNameLabel.AutoSize = True
-        Me.lblSummaryForNameLabel.Font = New System.Drawing.Font("AG Book Rounded", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSummaryForNameLabel.Location = New System.Drawing.Point(125, 120)
+        Me.lblSummaryForNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSummaryForNameLabel.Location = New System.Drawing.Point(121, 120)
         Me.lblSummaryForNameLabel.Name = "lblSummaryForNameLabel"
-        Me.lblSummaryForNameLabel.Size = New System.Drawing.Size(162, 26)
+        Me.lblSummaryForNameLabel.Size = New System.Drawing.Size(166, 25)
         Me.lblSummaryForNameLabel.TabIndex = 1
         Me.lblSummaryForNameLabel.Text = "Ticket Holder: "
         Me.lblSummaryForNameLabel.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -112,21 +112,20 @@ Partial Class TicketSummary
         'lblPurchaserName
         '
         Me.lblPurchaserName.AutoSize = True
-        Me.lblPurchaserName.Font = New System.Drawing.Font("AG Book Rounded", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPurchaserName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPurchaserName.Location = New System.Drawing.Point(293, 120)
         Me.lblPurchaserName.Name = "lblPurchaserName"
-        Me.lblPurchaserName.Size = New System.Drawing.Size(200, 26)
+        Me.lblPurchaserName.Size = New System.Drawing.Size(0, 25)
         Me.lblPurchaserName.TabIndex = 2
-        Me.lblPurchaserName.Text = "Purchaser's Name"
         '
         'lblTotalCost
         '
         Me.lblTotalCost.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.lblTotalCost.AutoSize = True
-        Me.lblTotalCost.Font = New System.Drawing.Font("AG Book Rounded", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalCost.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalCost.Location = New System.Drawing.Point(3, 167)
         Me.lblTotalCost.Name = "lblTotalCost"
-        Me.lblTotalCost.Size = New System.Drawing.Size(126, 26)
+        Me.lblTotalCost.Size = New System.Drawing.Size(127, 25)
         Me.lblTotalCost.TabIndex = 3
         Me.lblTotalCost.Text = "Total Cost:"
         Me.lblTotalCost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -135,10 +134,10 @@ Partial Class TicketSummary
         '
         Me.lblTotalTicketsPurchased.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.lblTotalTicketsPurchased.AutoSize = True
-        Me.lblTotalTicketsPurchased.Font = New System.Drawing.Font("AG Book Rounded", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalTicketsPurchased.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalTicketsPurchased.Location = New System.Drawing.Point(3, 207)
         Me.lblTotalTicketsPurchased.Name = "lblTotalTicketsPurchased"
-        Me.lblTotalTicketsPurchased.Size = New System.Drawing.Size(267, 26)
+        Me.lblTotalTicketsPurchased.Size = New System.Drawing.Size(274, 25)
         Me.lblTotalTicketsPurchased.TabIndex = 4
         Me.lblTotalTicketsPurchased.Text = "Total Tickets Purchased:"
         Me.lblTotalTicketsPurchased.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -147,10 +146,10 @@ Partial Class TicketSummary
         '
         Me.lblBalcony.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.lblBalcony.AutoSize = True
-        Me.lblBalcony.Font = New System.Drawing.Font("AG Book Rounded", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBalcony.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBalcony.Location = New System.Drawing.Point(3, 248)
         Me.lblBalcony.Name = "lblBalcony"
-        Me.lblBalcony.Size = New System.Drawing.Size(163, 23)
+        Me.lblBalcony.Size = New System.Drawing.Size(162, 24)
         Me.lblBalcony.TabIndex = 5
         Me.lblBalcony.Text = "Balcony Tickets:"
         Me.lblBalcony.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -159,10 +158,10 @@ Partial Class TicketSummary
         '
         Me.lblGeneralTickets.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.lblGeneralTickets.AutoSize = True
-        Me.lblGeneralTickets.Font = New System.Drawing.Font("AG Book Rounded", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGeneralTickets.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblGeneralTickets.Location = New System.Drawing.Point(3, 288)
         Me.lblGeneralTickets.Name = "lblGeneralTickets"
-        Me.lblGeneralTickets.Size = New System.Drawing.Size(164, 23)
+        Me.lblGeneralTickets.Size = New System.Drawing.Size(162, 24)
         Me.lblGeneralTickets.TabIndex = 6
         Me.lblGeneralTickets.Text = "General Tickets:"
         Me.lblGeneralTickets.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -171,10 +170,10 @@ Partial Class TicketSummary
         '
         Me.lblMezzanine.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.lblMezzanine.AutoSize = True
-        Me.lblMezzanine.Font = New System.Drawing.Font("AG Book Rounded", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMezzanine.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMezzanine.Location = New System.Drawing.Point(3, 328)
         Me.lblMezzanine.Name = "lblMezzanine"
-        Me.lblMezzanine.Size = New System.Drawing.Size(190, 23)
+        Me.lblMezzanine.Size = New System.Drawing.Size(189, 24)
         Me.lblMezzanine.TabIndex = 7
         Me.lblMezzanine.Text = "Mezzanine Tickets:"
         Me.lblMezzanine.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -183,10 +182,10 @@ Partial Class TicketSummary
         '
         Me.lblOrchestra.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.lblOrchestra.AutoSize = True
-        Me.lblOrchestra.Font = New System.Drawing.Font("AG Book Rounded", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOrchestra.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOrchestra.Location = New System.Drawing.Point(3, 368)
         Me.lblOrchestra.Name = "lblOrchestra"
-        Me.lblOrchestra.Size = New System.Drawing.Size(182, 23)
+        Me.lblOrchestra.Size = New System.Drawing.Size(179, 24)
         Me.lblOrchestra.TabIndex = 8
         Me.lblOrchestra.Text = "Orchestra Tickets:"
         Me.lblOrchestra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -222,72 +221,66 @@ Partial Class TicketSummary
         '
         Me.lblOrchestraOut.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblOrchestraOut.AutoSize = True
-        Me.lblOrchestraOut.Font = New System.Drawing.Font("AG Book Rounded", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblOrchestraOut.Location = New System.Drawing.Point(531, 368)
+        Me.lblOrchestraOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOrchestraOut.Location = New System.Drawing.Point(577, 368)
         Me.lblOrchestraOut.Name = "lblOrchestraOut"
-        Me.lblOrchestraOut.Size = New System.Drawing.Size(46, 23)
+        Me.lblOrchestraOut.Size = New System.Drawing.Size(0, 24)
         Me.lblOrchestraOut.TabIndex = 13
-        Me.lblOrchestraOut.Text = "888"
         Me.lblOrchestraOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblMezzanineOut
         '
         Me.lblMezzanineOut.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblMezzanineOut.AutoSize = True
-        Me.lblMezzanineOut.Font = New System.Drawing.Font("AG Book Rounded", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMezzanineOut.Location = New System.Drawing.Point(531, 328)
+        Me.lblMezzanineOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMezzanineOut.Location = New System.Drawing.Point(577, 328)
         Me.lblMezzanineOut.Name = "lblMezzanineOut"
-        Me.lblMezzanineOut.Size = New System.Drawing.Size(46, 23)
+        Me.lblMezzanineOut.Size = New System.Drawing.Size(0, 24)
         Me.lblMezzanineOut.TabIndex = 14
-        Me.lblMezzanineOut.Text = "888"
         Me.lblMezzanineOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblGeneralOut
         '
         Me.lblGeneralOut.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblGeneralOut.AutoSize = True
-        Me.lblGeneralOut.Font = New System.Drawing.Font("AG Book Rounded", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGeneralOut.Location = New System.Drawing.Point(531, 288)
+        Me.lblGeneralOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGeneralOut.Location = New System.Drawing.Point(577, 288)
         Me.lblGeneralOut.Name = "lblGeneralOut"
-        Me.lblGeneralOut.Size = New System.Drawing.Size(46, 23)
+        Me.lblGeneralOut.Size = New System.Drawing.Size(0, 24)
         Me.lblGeneralOut.TabIndex = 15
-        Me.lblGeneralOut.Text = "888"
         Me.lblGeneralOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblBalconyOut
         '
         Me.lblBalconyOut.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblBalconyOut.AutoSize = True
-        Me.lblBalconyOut.Font = New System.Drawing.Font("AG Book Rounded", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBalconyOut.Location = New System.Drawing.Point(531, 248)
+        Me.lblBalconyOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBalconyOut.Location = New System.Drawing.Point(577, 248)
         Me.lblBalconyOut.Name = "lblBalconyOut"
-        Me.lblBalconyOut.Size = New System.Drawing.Size(46, 23)
+        Me.lblBalconyOut.Size = New System.Drawing.Size(0, 24)
         Me.lblBalconyOut.TabIndex = 16
-        Me.lblBalconyOut.Text = "888"
         Me.lblBalconyOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblTotalPurchasedOut
         '
         Me.lblTotalPurchasedOut.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblTotalPurchasedOut.AutoSize = True
-        Me.lblTotalPurchasedOut.Font = New System.Drawing.Font("AG Book Rounded", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalPurchasedOut.Location = New System.Drawing.Point(500, 207)
+        Me.lblTotalPurchasedOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalPurchasedOut.Location = New System.Drawing.Point(577, 207)
         Me.lblTotalPurchasedOut.Name = "lblTotalPurchasedOut"
-        Me.lblTotalPurchasedOut.Size = New System.Drawing.Size(77, 26)
+        Me.lblTotalPurchasedOut.Size = New System.Drawing.Size(0, 25)
         Me.lblTotalPurchasedOut.TabIndex = 17
-        Me.lblTotalPurchasedOut.Text = "88888"
         Me.lblTotalPurchasedOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblTotalCostOut
         '
         Me.lblTotalCostOut.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblTotalCostOut.AutoSize = True
-        Me.lblTotalCostOut.Font = New System.Drawing.Font("AG Book Rounded", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalCostOut.Location = New System.Drawing.Point(455, 167)
+        Me.lblTotalCostOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalCostOut.Location = New System.Drawing.Point(577, 167)
         Me.lblTotalCostOut.Name = "lblTotalCostOut"
-        Me.lblTotalCostOut.Size = New System.Drawing.Size(122, 26)
+        Me.lblTotalCostOut.Size = New System.Drawing.Size(0, 25)
         Me.lblTotalCostOut.TabIndex = 18
-        Me.lblTotalCostOut.Text = "$88888.88"
         Me.lblTotalCostOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'TicketSummary

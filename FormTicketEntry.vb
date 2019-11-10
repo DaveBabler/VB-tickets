@@ -26,6 +26,31 @@ Public Class frmTicketEntryMain
     Private Sub frmTicketEntryMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Dictionary is populated on splash screen!!!!
         GlobalClass.PopulateListBoxWithDictionary(lstSeatLocations, GlobalClass.dicSeatingPrices)
+
+        'Wipe all the labels and text boxes that have holding patterns
+
+
+
+        Dim intSectOrig As Integer = strSectionNames.Count() - 1  'don't forget to subtract 1 to dim the array holy god that was awful
+
+
+        Dim strSectionLabelsTicket(intSectOrig) As String
+        Dim strSectionIncome(intSectOrig) As String
+        Dim strSectionCumulation(intSectOrig) As String
+
+
+        strSectionLabelsTicket = ArrayManipulation.StringArraySuffixer(strSectionNames, "Out")
+        strSectionIncome = ArrayManipulation.StringArraySuffixer(strSectionNames, "PriceOut")
+        strSectionCumulation = ArrayManipulation.StringArraySuffixer(strSectionNames, "CumulativeOut")
+
+        TextBoxManipulation.ClearTableLayoutTextBoxByChunk(strSectionNames, tbllyQuantity)
+        LabelManipulation.ClearLabelsOnTblLyOut(strSectionLabelsTicket, TicketSummary.tblyTicketSummary)
+        LabelManipulation.ClearLabelsOnTblLyOut(strSectionLabelsTicket, CumulativeTicketSummary.tlblyCumulative)
+        LabelManipulation.ClearLabelsOnTblLyOut(strSectionIncome, CumulativeTicketSummary.tlblyCumulative)
+        LabelManipulation.ClearLabelsOnTblLyOut(strSectionCumulation, CumulativeTicketSummary.tlblyCumulative)
+        GlobalClass.ClearSpecificIndividualControls()
+
+
     End Sub
 
     Private Sub lstSeatLocations_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstSeatLocations.SelectedIndexChanged
@@ -79,42 +104,8 @@ Public Class frmTicketEntryMain
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         TicketSummary.Show()
-        Dim strValue As String = "General"
-        'Dim ctrl As Control
-        'For Each ctrl In Me.Controls
-        '    If (ctrl.GetType() Is GetType(TextBox)) Then
-        '        Dim txt As TextBox = CType(ctrl, TextBox)
-        '        txt.Clear()
-        '    End If
-        'Next
-        'GlobalClass.ClearAllTextLabel(Me, "TextBox", strSectionNames)  This works but let's try more
-        For y As Integer = 0 To TicketSummary.tblyTicketSummary.RowCount - 1
+        CumulativeTicketSummary.Show()
 
-            For x As Integer = 0 To TicketSummary.tblyTicketSummary.ColumnCount - 1
-                Dim lb As Label = TryCast(TicketSummary.tblyTicketSummary.GetControlFromPosition(x, y), Label)
-
-                If lb IsNot Nothing Then
-                    If lb.Name.Contains(strValue) Then
-                        lb.Text = "NOTHING"
-                    End If
-                End If
-            Next
-        Next
-
-
-
-
-
-        Dim intSectOrig As Integer = strSectionNames.Count() - 1  'don't forget to subtract 1 to dim the array holy god that was awful
-
-
-        Dim strSectionLabelsTicket(intSectOrig) As String
-
-        strSectionLabelsTicket = ArrayManipulation.StringArraySuffixer(strSectionNames, "Out")
-
-
-        LabelManipulation.ClearLabelsOnTblLyOut(strSectionLabelsTicket, TicketSummary.tblyTicketSummary)
-        ArrayManipulation.TestArray()
 
     End Sub
 
@@ -133,4 +124,14 @@ Public Class frmTicketEntryMain
     Private Sub btnConfirmQty_MouseHover(sender As Object, e As EventArgs) Handles btnConfirmQty.MouseHover
         GlobalClass.ButtonFlash(btnConfirmQty)
     End Sub
+
+
+    Public Shared Sub ClearTicketEntryControls()
+        'This clears some individual labels and textboxes that don't really properly fit into an array 
+        'THIS IS ONLY for frmTicketEntry but will be folded into other subs
+        frmTicketEntryMain.txtTicketPurchaser.Clear()
+        frmTicketEntryMain.lblSubtotalOut.Text = ""
+
+    End Sub
+
 End Class

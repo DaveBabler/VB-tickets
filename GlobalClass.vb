@@ -12,6 +12,13 @@
         btnToModify.BackColor = Color.FromArgb(0, 204, 255)
     End Sub
 
+    Public Shared Sub ClearSpecificIndividualControls()
+        'This clears some individual labels and textboxes that don't really properly fit into an array
+        frmTicketEntryMain.ClearTicketEntryControls()
+        TicketSummary.ClearSummaryFields()
+        CumulativeTicketSummary.ClearCumulativeFields()
+
+    End Sub
 
 
     Public Shared Sub ClearAllTextLabel(ByRef ctrlContainer As Control, ByVal strLbTxtOrBoth As String, ByVal arrOfNames As String())

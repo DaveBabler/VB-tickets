@@ -1,17 +1,31 @@
 ﻿Public Class TextBoxManipulation
-    Public Shared Sub ClearTableLabelTextByChunk(ByRef ctrlContainer As Control, strValue As String)
+    Public Shared Sub ClearTableLayoutTextBoxByChunk(ByVal strArray As String(), ByRef tblLayoutName As System.Windows.Forms.TableLayoutPanel)
         'loops through and wipes labels if the label name has a specific string 
         'I know we traditionally use lowercase for LCVs but Control is a much more powerful entity than an int so
         'to future debuggers if you cry over this, I'm sorry this upsets you, but know you are loved.
 
-        For Each C As Control In ctrlContainer.Controls
-            If TypeOf C Is Label AndAlso CType(C, Label).Name.Contains(strValue) Then
-                C.Text = ""
+        'This sub clears labels that exist on a TableLayOutPanel which involves some more work than simple label clearing
+        'This was a nightmare to figure out--Dave Babler
+        Dim strValue As String = ""
+        For y As Integer = 0 To tblLayoutName.RowCount - 1
+            For x As Integer = 0 To tblLayoutName.ColumnCount - 1
+                Dim tb As TextBox = TryCast(tblLayoutName.GetControlFromPosition(x, y), TextBox)
 
-            ElseIf C.HasChildren Then
-                ClearTableLabelTextByChunk(ctrlContainer, strValue)
-            End If
-        Next C
+                If tb IsNot Nothing Then
+                    For q As Integer = 0 To strArray.Count - 1
+                        strValue = strArray(q)
+                        Console.WriteLine("String is " & strValue)
+                        If tb.Name.Contains(strValue) Then
+
+                            tb.Clear()
+
+                        End If
+                    Next q
+
+                End If
+
+            Next x
+        Next y
     End Sub
 
 

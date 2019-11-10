@@ -23,6 +23,15 @@ Partial Class CumulativeTicketSummary
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.tlblyCumulative = New System.Windows.Forms.TableLayoutPanel()
+        Me.lblOrchestraCumulativeOut = New System.Windows.Forms.Label()
+        Me.lblOrchestraPriceOut = New System.Windows.Forms.Label()
+        Me.lblMezzanineCumulativeOut = New System.Windows.Forms.Label()
+        Me.lblMezzaninePriceOut = New System.Windows.Forms.Label()
+        Me.lblGeneralCumulativeOut = New System.Windows.Forms.Label()
+        Me.lblGeneralPriceOut = New System.Windows.Forms.Label()
+        Me.lblBalconyCumulativeOut = New System.Windows.Forms.Label()
+        Me.lblBalconyPriceOut = New System.Windows.Forms.Label()
+        Me.lblBalconyOut = New System.Windows.Forms.Label()
         Me.lblCumulativeSalesHeader = New System.Windows.Forms.Label()
         Me.lblTicketPriceHeader = New System.Windows.Forms.Label()
         Me.lblTotalTicketsHeader = New System.Windows.Forms.Label()
@@ -35,18 +44,9 @@ Partial Class CumulativeTicketSummary
         Me.lblOrchestra = New System.Windows.Forms.Label()
         Me.lblTotalCumulativeSales = New System.Windows.Forms.Label()
         Me.lblTotalCumulativeOut = New System.Windows.Forms.Label()
-        Me.lblBalconyCumulativeSold = New System.Windows.Forms.Label()
-        Me.lblBalconyGeneralSold = New System.Windows.Forms.Label()
-        Me.lblBalconyMezzanineSold = New System.Windows.Forms.Label()
-        Me.lblBalconyOrchestraSold = New System.Windows.Forms.Label()
-        Me.lblBalconyPriceOut = New System.Windows.Forms.Label()
-        Me.lblBalconyCumulativeOut = New System.Windows.Forms.Label()
-        Me.lblGeneralPriceOut = New System.Windows.Forms.Label()
-        Me.lblGeneralCumulativeOut = New System.Windows.Forms.Label()
-        Me.lblMezzaninePriceOut = New System.Windows.Forms.Label()
-        Me.lblMezzanineCumulativeOut = New System.Windows.Forms.Label()
-        Me.lblOrchestraPriceOut = New System.Windows.Forms.Label()
-        Me.lblOrchestraCumulativeOut = New System.Windows.Forms.Label()
+        Me.lblGeneralOut = New System.Windows.Forms.Label()
+        Me.lblMezzanineOut = New System.Windows.Forms.Label()
+        Me.lblOrchestraOut = New System.Windows.Forms.Label()
         Me.tlblyCumulative.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -65,7 +65,7 @@ Partial Class CumulativeTicketSummary
         Me.tlblyCumulative.Controls.Add(Me.lblGeneralPriceOut, 2, 4)
         Me.tlblyCumulative.Controls.Add(Me.lblBalconyCumulativeOut, 3, 3)
         Me.tlblyCumulative.Controls.Add(Me.lblBalconyPriceOut, 2, 3)
-        Me.tlblyCumulative.Controls.Add(Me.lblBalconyCumulativeSold, 1, 3)
+        Me.tlblyCumulative.Controls.Add(Me.lblBalconyOut, 1, 3)
         Me.tlblyCumulative.Controls.Add(Me.lblCumulativeSalesHeader, 3, 2)
         Me.tlblyCumulative.Controls.Add(Me.lblTicketPriceHeader, 2, 2)
         Me.tlblyCumulative.Controls.Add(Me.lblTotalTicketsHeader, 1, 2)
@@ -78,9 +78,9 @@ Partial Class CumulativeTicketSummary
         Me.tlblyCumulative.Controls.Add(Me.lblOrchestra, 0, 6)
         Me.tlblyCumulative.Controls.Add(Me.lblTotalCumulativeSales, 0, 7)
         Me.tlblyCumulative.Controls.Add(Me.lblTotalCumulativeOut, 3, 7)
-        Me.tlblyCumulative.Controls.Add(Me.lblBalconyGeneralSold, 1, 4)
-        Me.tlblyCumulative.Controls.Add(Me.lblBalconyMezzanineSold, 1, 5)
-        Me.tlblyCumulative.Controls.Add(Me.lblBalconyOrchestraSold, 1, 6)
+        Me.tlblyCumulative.Controls.Add(Me.lblGeneralOut, 1, 4)
+        Me.tlblyCumulative.Controls.Add(Me.lblMezzanineOut, 1, 5)
+        Me.tlblyCumulative.Controls.Add(Me.lblOrchestraOut, 1, 6)
         Me.tlblyCumulative.Location = New System.Drawing.Point(9, 12)
         Me.tlblyCumulative.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tlblyCumulative.Name = "tlblyCumulative"
@@ -97,14 +97,113 @@ Partial Class CumulativeTicketSummary
         Me.tlblyCumulative.Size = New System.Drawing.Size(629, 474)
         Me.tlblyCumulative.TabIndex = 0
         '
+        'lblOrchestraCumulativeOut
+        '
+        Me.lblOrchestraCumulativeOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblOrchestraCumulativeOut.AutoSize = True
+        Me.lblOrchestraCumulativeOut.Location = New System.Drawing.Point(541, 403)
+        Me.lblOrchestraCumulativeOut.Name = "lblOrchestraCumulativeOut"
+        Me.lblOrchestraCumulativeOut.Size = New System.Drawing.Size(85, 24)
+        Me.lblOrchestraCumulativeOut.TabIndex = 23
+        Me.lblOrchestraCumulativeOut.Text = "$8888.88"
+        Me.lblOrchestraCumulativeOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'lblOrchestraPriceOut
+        '
+        Me.lblOrchestraPriceOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblOrchestraPriceOut.AutoSize = True
+        Me.lblOrchestraPriceOut.Location = New System.Drawing.Point(315, 403)
+        Me.lblOrchestraPriceOut.Name = "lblOrchestraPriceOut"
+        Me.lblOrchestraPriceOut.Size = New System.Drawing.Size(85, 24)
+        Me.lblOrchestraPriceOut.TabIndex = 22
+        Me.lblOrchestraPriceOut.Text = "$8888.88"
+        Me.lblOrchestraPriceOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'lblMezzanineCumulativeOut
+        '
+        Me.lblMezzanineCumulativeOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblMezzanineCumulativeOut.AutoSize = True
+        Me.lblMezzanineCumulativeOut.Location = New System.Drawing.Point(541, 363)
+        Me.lblMezzanineCumulativeOut.Name = "lblMezzanineCumulativeOut"
+        Me.lblMezzanineCumulativeOut.Size = New System.Drawing.Size(85, 24)
+        Me.lblMezzanineCumulativeOut.TabIndex = 21
+        Me.lblMezzanineCumulativeOut.Text = "$8888.88"
+        Me.lblMezzanineCumulativeOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'lblMezzaninePriceOut
+        '
+        Me.lblMezzaninePriceOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblMezzaninePriceOut.AutoSize = True
+        Me.lblMezzaninePriceOut.Location = New System.Drawing.Point(315, 363)
+        Me.lblMezzaninePriceOut.Name = "lblMezzaninePriceOut"
+        Me.lblMezzaninePriceOut.Size = New System.Drawing.Size(85, 24)
+        Me.lblMezzaninePriceOut.TabIndex = 20
+        Me.lblMezzaninePriceOut.Text = "$8888.88"
+        Me.lblMezzaninePriceOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'lblGeneralCumulativeOut
+        '
+        Me.lblGeneralCumulativeOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblGeneralCumulativeOut.AutoSize = True
+        Me.lblGeneralCumulativeOut.Location = New System.Drawing.Point(541, 323)
+        Me.lblGeneralCumulativeOut.Name = "lblGeneralCumulativeOut"
+        Me.lblGeneralCumulativeOut.Size = New System.Drawing.Size(85, 24)
+        Me.lblGeneralCumulativeOut.TabIndex = 19
+        Me.lblGeneralCumulativeOut.Text = "$8888.88"
+        Me.lblGeneralCumulativeOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'lblGeneralPriceOut
+        '
+        Me.lblGeneralPriceOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblGeneralPriceOut.AutoSize = True
+        Me.lblGeneralPriceOut.Location = New System.Drawing.Point(315, 323)
+        Me.lblGeneralPriceOut.Name = "lblGeneralPriceOut"
+        Me.lblGeneralPriceOut.Size = New System.Drawing.Size(85, 24)
+        Me.lblGeneralPriceOut.TabIndex = 18
+        Me.lblGeneralPriceOut.Text = "$8888.88"
+        Me.lblGeneralPriceOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'lblBalconyCumulativeOut
+        '
+        Me.lblBalconyCumulativeOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblBalconyCumulativeOut.AutoSize = True
+        Me.lblBalconyCumulativeOut.Location = New System.Drawing.Point(541, 283)
+        Me.lblBalconyCumulativeOut.Name = "lblBalconyCumulativeOut"
+        Me.lblBalconyCumulativeOut.Size = New System.Drawing.Size(85, 24)
+        Me.lblBalconyCumulativeOut.TabIndex = 17
+        Me.lblBalconyCumulativeOut.Text = "$8888.88"
+        Me.lblBalconyCumulativeOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'lblBalconyPriceOut
+        '
+        Me.lblBalconyPriceOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblBalconyPriceOut.AutoSize = True
+        Me.lblBalconyPriceOut.Location = New System.Drawing.Point(315, 283)
+        Me.lblBalconyPriceOut.Name = "lblBalconyPriceOut"
+        Me.lblBalconyPriceOut.Size = New System.Drawing.Size(85, 24)
+        Me.lblBalconyPriceOut.TabIndex = 16
+        Me.lblBalconyPriceOut.Text = "$8888.88"
+        Me.lblBalconyPriceOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'lblBalconyOut
+        '
+        Me.lblBalconyOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblBalconyOut.AutoSize = True
+        Me.lblBalconyOut.Location = New System.Drawing.Point(236, 283)
+        Me.lblBalconyOut.Name = "lblBalconyOut"
+        Me.lblBalconyOut.Size = New System.Drawing.Size(40, 24)
+        Me.lblBalconyOut.TabIndex = 12
+        Me.lblBalconyOut.Text = "888"
+        Me.lblBalconyOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
         'lblCumulativeSalesHeader
         '
         Me.lblCumulativeSalesHeader.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblCumulativeSalesHeader.AutoSize = True
-        Me.lblCumulativeSalesHeader.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCumulativeSalesHeader.Location = New System.Drawing.Point(427, 236)
+        Me.lblCumulativeSalesHeader.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCumulativeSalesHeader.Location = New System.Drawing.Point(456, 243)
         Me.lblCumulativeSalesHeader.Name = "lblCumulativeSalesHeader"
-        Me.lblCumulativeSalesHeader.Size = New System.Drawing.Size(199, 31)
+        Me.lblCumulativeSalesHeader.Size = New System.Drawing.Size(170, 24)
         Me.lblCumulativeSalesHeader.TabIndex = 5
         Me.lblCumulativeSalesHeader.Text = "Cumulative Sales"
         Me.lblCumulativeSalesHeader.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -113,10 +212,10 @@ Partial Class CumulativeTicketSummary
         '
         Me.lblTicketPriceHeader.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTicketPriceHeader.AutoSize = True
-        Me.lblTicketPriceHeader.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTicketPriceHeader.Location = New System.Drawing.Point(331, 236)
+        Me.lblTicketPriceHeader.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTicketPriceHeader.Location = New System.Drawing.Point(342, 243)
         Me.lblTicketPriceHeader.Name = "lblTicketPriceHeader"
-        Me.lblTicketPriceHeader.Size = New System.Drawing.Size(69, 31)
+        Me.lblTicketPriceHeader.Size = New System.Drawing.Size(58, 24)
         Me.lblTicketPriceHeader.TabIndex = 4
         Me.lblTicketPriceHeader.Text = "Price"
         Me.lblTicketPriceHeader.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -125,10 +224,10 @@ Partial Class CumulativeTicketSummary
         '
         Me.lblTotalTicketsHeader.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTotalTicketsHeader.AutoSize = True
-        Me.lblTotalTicketsHeader.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalTicketsHeader.Location = New System.Drawing.Point(196, 236)
+        Me.lblTotalTicketsHeader.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalTicketsHeader.Location = New System.Drawing.Point(207, 243)
         Me.lblTotalTicketsHeader.Name = "lblTotalTicketsHeader"
-        Me.lblTotalTicketsHeader.Size = New System.Drawing.Size(80, 31)
+        Me.lblTotalTicketsHeader.Size = New System.Drawing.Size(69, 24)
         Me.lblTotalTicketsHeader.TabIndex = 3
         Me.lblTotalTicketsHeader.Text = "# Sold"
         '
@@ -151,10 +250,10 @@ Partial Class CumulativeTicketSummary
         Me.lblHeaderCumulative.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.lblHeaderCumulative.AutoSize = True
         Me.tlblyCumulative.SetColumnSpan(Me.lblHeaderCumulative, 4)
-        Me.lblHeaderCumulative.Font = New System.Drawing.Font("Noto Sans Lao", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHeaderCumulative.Location = New System.Drawing.Point(3, 177)
+        Me.lblHeaderCumulative.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHeaderCumulative.Location = New System.Drawing.Point(3, 182)
         Me.lblHeaderCumulative.Name = "lblHeaderCumulative"
-        Me.lblHeaderCumulative.Size = New System.Drawing.Size(503, 39)
+        Me.lblHeaderCumulative.Size = New System.Drawing.Size(426, 29)
         Me.lblHeaderCumulative.TabIndex = 1
         Me.lblHeaderCumulative.Text = "Total Ticket Sales Summary Report"
         '
@@ -162,10 +261,10 @@ Partial Class CumulativeTicketSummary
         '
         Me.lblSectionHeader.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lblSectionHeader.AutoSize = True
-        Me.lblSectionHeader.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSectionHeader.Location = New System.Drawing.Point(3, 236)
+        Me.lblSectionHeader.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSectionHeader.Location = New System.Drawing.Point(3, 243)
         Me.lblSectionHeader.Name = "lblSectionHeader"
-        Me.lblSectionHeader.Size = New System.Drawing.Size(94, 31)
+        Me.lblSectionHeader.Size = New System.Drawing.Size(80, 24)
         Me.lblSectionHeader.TabIndex = 2
         Me.lblSectionHeader.Text = "Section"
         '
@@ -173,9 +272,9 @@ Partial Class CumulativeTicketSummary
         '
         Me.lblBalcony.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lblBalcony.AutoSize = True
-        Me.lblBalcony.Location = New System.Drawing.Point(3, 276)
+        Me.lblBalcony.Location = New System.Drawing.Point(3, 283)
         Me.lblBalcony.Name = "lblBalcony"
-        Me.lblBalcony.Size = New System.Drawing.Size(92, 31)
+        Me.lblBalcony.Size = New System.Drawing.Size(77, 24)
         Me.lblBalcony.TabIndex = 6
         Me.lblBalcony.Text = "Balcony"
         Me.lblBalcony.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -184,9 +283,9 @@ Partial Class CumulativeTicketSummary
         '
         Me.lblGeneral.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lblGeneral.AutoSize = True
-        Me.lblGeneral.Location = New System.Drawing.Point(3, 316)
+        Me.lblGeneral.Location = New System.Drawing.Point(3, 323)
         Me.lblGeneral.Name = "lblGeneral"
-        Me.lblGeneral.Size = New System.Drawing.Size(91, 31)
+        Me.lblGeneral.Size = New System.Drawing.Size(77, 24)
         Me.lblGeneral.TabIndex = 7
         Me.lblGeneral.Text = "General"
         Me.lblGeneral.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -195,9 +294,9 @@ Partial Class CumulativeTicketSummary
         '
         Me.lblMezzanine.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lblMezzanine.AutoSize = True
-        Me.lblMezzanine.Location = New System.Drawing.Point(3, 356)
+        Me.lblMezzanine.Location = New System.Drawing.Point(3, 363)
         Me.lblMezzanine.Name = "lblMezzanine"
-        Me.lblMezzanine.Size = New System.Drawing.Size(119, 31)
+        Me.lblMezzanine.Size = New System.Drawing.Size(102, 24)
         Me.lblMezzanine.TabIndex = 8
         Me.lblMezzanine.Text = "Mezzanine"
         Me.lblMezzanine.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -206,9 +305,9 @@ Partial Class CumulativeTicketSummary
         '
         Me.lblOrchestra.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lblOrchestra.AutoSize = True
-        Me.lblOrchestra.Location = New System.Drawing.Point(3, 396)
+        Me.lblOrchestra.Location = New System.Drawing.Point(3, 403)
         Me.lblOrchestra.Name = "lblOrchestra"
-        Me.lblOrchestra.Size = New System.Drawing.Size(109, 31)
+        Me.lblOrchestra.Size = New System.Drawing.Size(92, 24)
         Me.lblOrchestra.TabIndex = 9
         Me.lblOrchestra.Text = "Orchestra"
         Me.lblOrchestra.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -218,10 +317,10 @@ Partial Class CumulativeTicketSummary
         Me.lblTotalCumulativeSales.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTotalCumulativeSales.AutoSize = True
         Me.tlblyCumulative.SetColumnSpan(Me.lblTotalCumulativeSales, 3)
-        Me.lblTotalCumulativeSales.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalCumulativeSales.Location = New System.Drawing.Point(137, 443)
+        Me.lblTotalCumulativeSales.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalCumulativeSales.Location = New System.Drawing.Point(172, 450)
         Me.lblTotalCumulativeSales.Name = "lblTotalCumulativeSales"
-        Me.lblTotalCumulativeSales.Size = New System.Drawing.Size(263, 31)
+        Me.lblTotalCumulativeSales.Size = New System.Drawing.Size(228, 24)
         Me.lblTotalCumulativeSales.TabIndex = 10
         Me.lblTotalCumulativeSales.Text = "Total Cumulative Sales:"
         Me.lblTotalCumulativeSales.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -230,154 +329,55 @@ Partial Class CumulativeTicketSummary
         '
         Me.lblTotalCumulativeOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lblTotalCumulativeOut.AutoSize = True
-        Me.lblTotalCumulativeOut.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalCumulativeOut.Location = New System.Drawing.Point(406, 443)
+        Me.lblTotalCumulativeOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalCumulativeOut.Location = New System.Drawing.Point(406, 450)
         Me.lblTotalCumulativeOut.Name = "lblTotalCumulativeOut"
-        Me.lblTotalCumulativeOut.Size = New System.Drawing.Size(125, 31)
+        Me.lblTotalCumulativeOut.Size = New System.Drawing.Size(104, 24)
         Me.lblTotalCumulativeOut.TabIndex = 11
         Me.lblTotalCumulativeOut.Text = "$88888.88"
         Me.lblTotalCumulativeOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'lblBalconyCumulativeSold
+        'lblGeneralOut
         '
-        Me.lblBalconyCumulativeSold.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblBalconyCumulativeSold.AutoSize = True
-        Me.lblBalconyCumulativeSold.Location = New System.Drawing.Point(226, 276)
-        Me.lblBalconyCumulativeSold.Name = "lblBalconyCumulativeSold"
-        Me.lblBalconyCumulativeSold.Size = New System.Drawing.Size(50, 31)
-        Me.lblBalconyCumulativeSold.TabIndex = 12
-        Me.lblBalconyCumulativeSold.Text = "888"
-        Me.lblBalconyCumulativeSold.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.lblGeneralOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblGeneralOut.AutoSize = True
+        Me.lblGeneralOut.Location = New System.Drawing.Point(236, 323)
+        Me.lblGeneralOut.Name = "lblGeneralOut"
+        Me.lblGeneralOut.Size = New System.Drawing.Size(40, 24)
+        Me.lblGeneralOut.TabIndex = 13
+        Me.lblGeneralOut.Text = "888"
+        Me.lblGeneralOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
-        'lblBalconyGeneralSold
+        'lblMezzanineOut
         '
-        Me.lblBalconyGeneralSold.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblBalconyGeneralSold.AutoSize = True
-        Me.lblBalconyGeneralSold.Location = New System.Drawing.Point(226, 316)
-        Me.lblBalconyGeneralSold.Name = "lblBalconyGeneralSold"
-        Me.lblBalconyGeneralSold.Size = New System.Drawing.Size(50, 31)
-        Me.lblBalconyGeneralSold.TabIndex = 13
-        Me.lblBalconyGeneralSold.Text = "888"
-        Me.lblBalconyGeneralSold.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.lblMezzanineOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblMezzanineOut.AutoSize = True
+        Me.lblMezzanineOut.Location = New System.Drawing.Point(236, 363)
+        Me.lblMezzanineOut.Name = "lblMezzanineOut"
+        Me.lblMezzanineOut.Size = New System.Drawing.Size(40, 24)
+        Me.lblMezzanineOut.TabIndex = 14
+        Me.lblMezzanineOut.Text = "888"
+        Me.lblMezzanineOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
-        'lblBalconyMezzanineSold
+        'lblOrchestraOut
         '
-        Me.lblBalconyMezzanineSold.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblBalconyMezzanineSold.AutoSize = True
-        Me.lblBalconyMezzanineSold.Location = New System.Drawing.Point(226, 356)
-        Me.lblBalconyMezzanineSold.Name = "lblBalconyMezzanineSold"
-        Me.lblBalconyMezzanineSold.Size = New System.Drawing.Size(50, 31)
-        Me.lblBalconyMezzanineSold.TabIndex = 14
-        Me.lblBalconyMezzanineSold.Text = "888"
-        Me.lblBalconyMezzanineSold.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        '
-        'lblBalconyOrchestraSold
-        '
-        Me.lblBalconyOrchestraSold.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblBalconyOrchestraSold.AutoSize = True
-        Me.lblBalconyOrchestraSold.Location = New System.Drawing.Point(226, 396)
-        Me.lblBalconyOrchestraSold.Name = "lblBalconyOrchestraSold"
-        Me.lblBalconyOrchestraSold.Size = New System.Drawing.Size(50, 31)
-        Me.lblBalconyOrchestraSold.TabIndex = 15
-        Me.lblBalconyOrchestraSold.Text = "888"
-        Me.lblBalconyOrchestraSold.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        '
-        'lblBalconyPriceOut
-        '
-        Me.lblBalconyPriceOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblBalconyPriceOut.AutoSize = True
-        Me.lblBalconyPriceOut.Location = New System.Drawing.Point(296, 276)
-        Me.lblBalconyPriceOut.Name = "lblBalconyPriceOut"
-        Me.lblBalconyPriceOut.Size = New System.Drawing.Size(104, 31)
-        Me.lblBalconyPriceOut.TabIndex = 16
-        Me.lblBalconyPriceOut.Text = "$8888.88"
-        Me.lblBalconyPriceOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        '
-        'lblBalconyCumulativeOut
-        '
-        Me.lblBalconyCumulativeOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblBalconyCumulativeOut.AutoSize = True
-        Me.lblBalconyCumulativeOut.Location = New System.Drawing.Point(522, 276)
-        Me.lblBalconyCumulativeOut.Name = "lblBalconyCumulativeOut"
-        Me.lblBalconyCumulativeOut.Size = New System.Drawing.Size(104, 31)
-        Me.lblBalconyCumulativeOut.TabIndex = 17
-        Me.lblBalconyCumulativeOut.Text = "$8888.88"
-        Me.lblBalconyCumulativeOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        '
-        'lblGeneralPriceOut
-        '
-        Me.lblGeneralPriceOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblGeneralPriceOut.AutoSize = True
-        Me.lblGeneralPriceOut.Location = New System.Drawing.Point(296, 316)
-        Me.lblGeneralPriceOut.Name = "lblGeneralPriceOut"
-        Me.lblGeneralPriceOut.Size = New System.Drawing.Size(104, 31)
-        Me.lblGeneralPriceOut.TabIndex = 18
-        Me.lblGeneralPriceOut.Text = "$8888.88"
-        Me.lblGeneralPriceOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        '
-        'lblGeneralCumulativeOut
-        '
-        Me.lblGeneralCumulativeOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblGeneralCumulativeOut.AutoSize = True
-        Me.lblGeneralCumulativeOut.Location = New System.Drawing.Point(522, 316)
-        Me.lblGeneralCumulativeOut.Name = "lblGeneralCumulativeOut"
-        Me.lblGeneralCumulativeOut.Size = New System.Drawing.Size(104, 31)
-        Me.lblGeneralCumulativeOut.TabIndex = 19
-        Me.lblGeneralCumulativeOut.Text = "$8888.88"
-        Me.lblGeneralCumulativeOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        '
-        'lblMezzaninePriceOut
-        '
-        Me.lblMezzaninePriceOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblMezzaninePriceOut.AutoSize = True
-        Me.lblMezzaninePriceOut.Location = New System.Drawing.Point(296, 356)
-        Me.lblMezzaninePriceOut.Name = "lblMezzaninePriceOut"
-        Me.lblMezzaninePriceOut.Size = New System.Drawing.Size(104, 31)
-        Me.lblMezzaninePriceOut.TabIndex = 20
-        Me.lblMezzaninePriceOut.Text = "$8888.88"
-        Me.lblMezzaninePriceOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        '
-        'lblMezzanineCumulativeOut
-        '
-        Me.lblMezzanineCumulativeOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblMezzanineCumulativeOut.AutoSize = True
-        Me.lblMezzanineCumulativeOut.Location = New System.Drawing.Point(522, 356)
-        Me.lblMezzanineCumulativeOut.Name = "lblMezzanineCumulativeOut"
-        Me.lblMezzanineCumulativeOut.Size = New System.Drawing.Size(104, 31)
-        Me.lblMezzanineCumulativeOut.TabIndex = 21
-        Me.lblMezzanineCumulativeOut.Text = "$8888.88"
-        Me.lblMezzanineCumulativeOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        '
-        'lblOrchestraPriceOut
-        '
-        Me.lblOrchestraPriceOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblOrchestraPriceOut.AutoSize = True
-        Me.lblOrchestraPriceOut.Location = New System.Drawing.Point(296, 396)
-        Me.lblOrchestraPriceOut.Name = "lblOrchestraPriceOut"
-        Me.lblOrchestraPriceOut.Size = New System.Drawing.Size(104, 31)
-        Me.lblOrchestraPriceOut.TabIndex = 22
-        Me.lblOrchestraPriceOut.Text = "$8888.88"
-        Me.lblOrchestraPriceOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        '
-        'lblOrchestraCumulativeOut
-        '
-        Me.lblOrchestraCumulativeOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblOrchestraCumulativeOut.AutoSize = True
-        Me.lblOrchestraCumulativeOut.Location = New System.Drawing.Point(522, 396)
-        Me.lblOrchestraCumulativeOut.Name = "lblOrchestraCumulativeOut"
-        Me.lblOrchestraCumulativeOut.Size = New System.Drawing.Size(104, 31)
-        Me.lblOrchestraCumulativeOut.TabIndex = 23
-        Me.lblOrchestraCumulativeOut.Text = "$8888.88"
-        Me.lblOrchestraCumulativeOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.lblOrchestraOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblOrchestraOut.AutoSize = True
+        Me.lblOrchestraOut.Location = New System.Drawing.Point(236, 403)
+        Me.lblOrchestraOut.Name = "lblOrchestraOut"
+        Me.lblOrchestraOut.Size = New System.Drawing.Size(40, 24)
+        Me.lblOrchestraOut.TabIndex = 15
+        Me.lblOrchestraOut.Text = "888"
+        Me.lblOrchestraOut.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'CumulativeTicketSummary
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 31.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(646, 824)
         Me.Controls.Add(Me.tlblyCumulative)
-        Me.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(7)
         Me.Name = "CumulativeTicketSummary"
         Me.Padding = New System.Windows.Forms.Padding(126, 124, 126, 124)
@@ -401,10 +401,10 @@ Partial Class CumulativeTicketSummary
     Friend WithEvents lblOrchestra As Label
     Friend WithEvents lblTotalCumulativeSales As Label
     Friend WithEvents lblTotalCumulativeOut As Label
-    Friend WithEvents lblBalconyCumulativeSold As Label
-    Friend WithEvents lblBalconyGeneralSold As Label
-    Friend WithEvents lblBalconyMezzanineSold As Label
-    Friend WithEvents lblBalconyOrchestraSold As Label
+    Friend WithEvents lblBalconyOut As Label
+    Friend WithEvents lblGeneralOut As Label
+    Friend WithEvents lblMezzanineOut As Label
+    Friend WithEvents lblOrchestraOut As Label
     Friend WithEvents lblOrchestraCumulativeOut As Label
     Friend WithEvents lblOrchestraPriceOut As Label
     Friend WithEvents lblMezzanineCumulativeOut As Label
