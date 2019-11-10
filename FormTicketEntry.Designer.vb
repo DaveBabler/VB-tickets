@@ -322,7 +322,6 @@ Partial Class frmTicketEntryMain
         Me.txtQtyMezzanine.Name = "txtQtyMezzanine"
         Me.txtQtyMezzanine.Size = New System.Drawing.Size(57, 22)
         Me.txtQtyMezzanine.TabIndex = 14
-        Me.txtQtyMezzanine.Text = "888"
         Me.txtQtyMezzanine.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtQtyMezzanine.Visible = False
         '
@@ -335,7 +334,6 @@ Partial Class frmTicketEntryMain
         Me.txtQtyGeneral.Name = "txtQtyGeneral"
         Me.txtQtyGeneral.Size = New System.Drawing.Size(57, 22)
         Me.txtQtyGeneral.TabIndex = 13
-        Me.txtQtyGeneral.Text = "888"
         Me.txtQtyGeneral.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtQtyGeneral.Visible = False
         '
@@ -348,7 +346,6 @@ Partial Class frmTicketEntryMain
         Me.txtQtyBalcony.Name = "txtQtyBalcony"
         Me.txtQtyBalcony.Size = New System.Drawing.Size(57, 22)
         Me.txtQtyBalcony.TabIndex = 12
-        Me.txtQtyBalcony.Text = "888"
         Me.txtQtyBalcony.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtQtyBalcony.Visible = False
         '
@@ -361,7 +358,6 @@ Partial Class frmTicketEntryMain
         Me.txtQtyOrchestra.Name = "txtQtyOrchestra"
         Me.txtQtyOrchestra.Size = New System.Drawing.Size(57, 22)
         Me.txtQtyOrchestra.TabIndex = 15
-        Me.txtQtyOrchestra.Text = "888"
         Me.txtQtyOrchestra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtQtyOrchestra.Visible = False
         '
