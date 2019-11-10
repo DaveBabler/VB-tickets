@@ -66,7 +66,7 @@ Partial Class frmTicketEntryMain
         Me.btnConfirmQty.Location = New System.Drawing.Point(392, 164)
         Me.btnConfirmQty.Name = "btnConfirmQty"
         Me.btnConfirmQty.Size = New System.Drawing.Size(161, 30)
-        Me.btnConfirmQty.TabIndex = 0
+        Me.btnConfirmQty.TabIndex = 3
         Me.btnConfirmQty.Text = "Confirm &Quantities"
         Me.btnConfirmQty.UseVisualStyleBackColor = False
         '
@@ -82,7 +82,7 @@ Partial Class frmTicketEntryMain
         Me.lstSeatLocations.Name = "lstSeatLocations"
         Me.lstSeatLocations.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
         Me.lstSeatLocations.Size = New System.Drawing.Size(116, 84)
-        Me.lstSeatLocations.TabIndex = 1
+        Me.lstSeatLocations.TabIndex = 2
         '
         'txtTicketPurchaser
         '
@@ -92,7 +92,7 @@ Partial Class frmTicketEntryMain
         Me.txtTicketPurchaser.Location = New System.Drawing.Point(252, 112)
         Me.txtTicketPurchaser.Name = "txtTicketPurchaser"
         Me.txtTicketPurchaser.Size = New System.Drawing.Size(211, 22)
-        Me.txtTicketPurchaser.TabIndex = 2
+        Me.txtTicketPurchaser.TabIndex = 1
         '
         'lblTicketPurchaser
         '
@@ -125,7 +125,7 @@ Partial Class frmTicketEntryMain
         Me.btnClear.Location = New System.Drawing.Point(392, 276)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(161, 30)
-        Me.btnClear.TabIndex = 6
+        Me.btnClear.TabIndex = 5
         Me.btnClear.Text = "&Clear"
         Me.btnClear.UseVisualStyleBackColor = False
         '
@@ -138,7 +138,7 @@ Partial Class frmTicketEntryMain
         Me.btnExit.Location = New System.Drawing.Point(392, 332)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(161, 30)
-        Me.btnExit.TabIndex = 7
+        Me.btnExit.TabIndex = 6
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = False
         '
@@ -244,7 +244,7 @@ Partial Class frmTicketEntryMain
         Me.btnPrintReceipt.Location = New System.Drawing.Point(392, 220)
         Me.btnPrintReceipt.Name = "btnPrintReceipt"
         Me.btnPrintReceipt.Size = New System.Drawing.Size(161, 30)
-        Me.btnPrintReceipt.TabIndex = 14
+        Me.btnPrintReceipt.TabIndex = 4
         Me.btnPrintReceipt.Text = "&Print Receipt"
         Me.btnPrintReceipt.UseVisualStyleBackColor = False
         '
@@ -322,6 +322,7 @@ Partial Class frmTicketEntryMain
         Me.txtQtyMezzanine.Name = "txtQtyMezzanine"
         Me.txtQtyMezzanine.Size = New System.Drawing.Size(57, 22)
         Me.txtQtyMezzanine.TabIndex = 14
+        Me.txtQtyMezzanine.TabStop = False
         Me.txtQtyMezzanine.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtQtyMezzanine.Visible = False
         '
@@ -334,6 +335,7 @@ Partial Class frmTicketEntryMain
         Me.txtQtyGeneral.Name = "txtQtyGeneral"
         Me.txtQtyGeneral.Size = New System.Drawing.Size(57, 22)
         Me.txtQtyGeneral.TabIndex = 13
+        Me.txtQtyGeneral.TabStop = False
         Me.txtQtyGeneral.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtQtyGeneral.Visible = False
         '
@@ -346,6 +348,7 @@ Partial Class frmTicketEntryMain
         Me.txtQtyBalcony.Name = "txtQtyBalcony"
         Me.txtQtyBalcony.Size = New System.Drawing.Size(57, 22)
         Me.txtQtyBalcony.TabIndex = 12
+        Me.txtQtyBalcony.TabStop = False
         Me.txtQtyBalcony.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtQtyBalcony.Visible = False
         '
@@ -358,6 +361,7 @@ Partial Class frmTicketEntryMain
         Me.txtQtyOrchestra.Name = "txtQtyOrchestra"
         Me.txtQtyOrchestra.Size = New System.Drawing.Size(57, 22)
         Me.txtQtyOrchestra.TabIndex = 15
+        Me.txtQtyOrchestra.TabStop = False
         Me.txtQtyOrchestra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtQtyOrchestra.Visible = False
         '

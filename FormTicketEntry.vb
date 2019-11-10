@@ -84,6 +84,13 @@ Public Class frmTicketEntryMain
     End Sub
 
     Private Sub btnConfirmQty_Click(sender As Object, e As EventArgs) Handles btnConfirmQty.Click
+        'You
+        'Have
+        'Got
+        'To
+        'Do
+        'a try catch block here to make sure only integers are accepted in the text boxes
+
         If txtTicketPurchaser.Text = "" Then
             GlobalClass.UserErrorMessage("You must enter in the purchaser's name to proceed", "Please fill in the form!")
             txtTicketPurchaser.Focus()

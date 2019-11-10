@@ -7,6 +7,7 @@
 
     Public Shared Sub ArrayEndTotal(ByRef arrToTotal As Decimal())
         'This subtotals an array and saves it in the last value of the array 
+        'I was going to use this to tabulate my arrays but I decided manipulating jagged arrays was garbage
         Dim decSubtotal = 0D
         Dim i As Integer
         For i = 0 To arrToTotal.Count() - 2
@@ -19,6 +20,26 @@
 
     End Sub
 
+    Public Shared Function ArrayTotaler(ByRef arrToTotal As Decimal()) As Decimal
+        Dim decSubtotal = 0D
+        Dim i As Integer
+        For i = 0 To arrToTotal.Count() - 1
+
+            decSubtotal += arrToTotal(i)
+
+        Next i
+        Return decSubtotal
+    End Function
+    Public Shared Function ArrayTotaler(ByRef arrToTotal As Integer()) As Integer
+        Dim intSubTotal = 0I
+        Dim i As Integer
+        For i = 0 To arrToTotal.Count() - 1
+
+            intSubTotal += arrToTotal(i)
+
+        Next i
+        Return intSubTotal
+    End Function
 
     Public Shared Function ArrayVisibilityVerifier(strStartingArray() As String) As String()
         Dim strArrayToManipulate(strStartingArray.Count() - 1)

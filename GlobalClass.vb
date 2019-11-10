@@ -1,4 +1,8 @@
 ﻿Public Class GlobalClass
+    Public Shared decTotalPerSection(3) As Decimal
+    Public Shared intCumulativePurchPerSection(3) As Integer
+    Public Shared decCumulativePerSection(3) As Integer
+
     Public Shared decTotalGroupWGrandTotal(4) As Decimal 'yes I know you'd think it should be 3 but I'm putting in the grand total as well, for fun!
     Public Shared dicSeatingPrices As New Dictionary(Of String, Decimal)
     Public Shared tblLayout As TableLayoutPanel 'this exists only to shut up the optional paramaters of a sub

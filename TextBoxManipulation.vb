@@ -29,6 +29,36 @@
     End Sub
 
 
+    Public Shared Function SaveTableLayOutTextBoxToArray(ByVal strArray As String(), ByRef tblLayoutName As System.Windows.Forms.TableLayoutPanel) As Integer()
+        'loops through textboxes in a tablelayout and then shoves them in an array
+        'this can be overloaded in the future to accomodate decimals with very little effort. Save this to your codebase
+        Dim intArrayLength As Integer = (strArray.Count - 1)
+        Dim intNewArray(intArrayLength) As Integer
+
+        'This sub clears labels that exist on a TableLayOutPanel which involves some more work than simple label clearing
+        'This was a nightmare to figure out--Dave Babler
+        Dim strValue As String = ""
+        For y As Integer = 0 To tblLayoutName.RowCount - 1
+            For x As Integer = 0 To tblLayoutName.ColumnCount - 1
+                Dim tb As TextBox = TryCast(tblLayoutName.GetControlFromPosition(x, y), TextBox)
+
+                If tb IsNot Nothing Then
+                    For q As Integer = 0 To strArray.Count - 1
+                        strValue = strArray(q)
+                        Console.WriteLine("String is " & strValue)
+                        If tb.Name.Contains(strValue) Then
+
+                            intNewArray(q) = CInt(tb.Text)
+
+                        End If
+                    Next q
+
+                End If
+
+            Next x
+        Next y
+    End Function
+
 
     Public Shared Sub ClearTextBoxTextByChunk(ByRef ctrlContainer As Control, strValue As String)
         'loops through and wipes TextBoxs if the TextBox name has a specific string 
