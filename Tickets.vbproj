@@ -104,6 +104,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GlobalClass.vb" />
+    <Compile Include="LabelManipulation.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -119,12 +120,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="TableLayoutManipulation.Designer.vb">
+      <DependentUpon>TableLayoutManipulation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TableLayoutManipulation.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="tempshuffler.Designer.vb">
       <DependentUpon>tempshuffler.vb</DependentUpon>
     </Compile>
     <Compile Include="tempshuffler.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TextBoxManipulation.vb" />
     <Compile Include="TicketSummary.Designer.vb">
       <DependentUpon>TicketSummary.vb</DependentUpon>
     </Compile>

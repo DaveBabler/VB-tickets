@@ -35,7 +35,7 @@ Public Class frmTicketEntryMain
         For i As Integer = 0 To lstSeatLocations.Items.Count - 1
             If lstSeatLocations.SelectedIndices.Contains(i) Then
                 strSelectedValue = lstSeatLocations.Items(i).ToString()
-                GlobalClass.CheckLabels(Me, strSelectedValue, False, True)
+                LabelManipulation.CheckLabelVisibility(Me, strSelectedValue, False, True)
                 'GlobalClass.ReduceTableLayoutRowPercent(tbllyQuantity, i, "grow")   BRILLIANT PLAN WAS A FAILURE!!!
 
             End If
@@ -45,7 +45,7 @@ Public Class frmTicketEntryMain
                 '  Console.WriteLine("Not Selected" & i.ToString() & " the value is: " & lstSeatLocations.Items(i).ToString())
 
                 strUnselected = lstSeatLocations.Items(i).ToString()
-                GlobalClass.CheckLabels(Me, strUnselected, True, False)
+                LabelManipulation.CheckLabelVisibility(Me, strUnselected, True, False)
                 'GlobalClass.ReduceTableLayoutRowPercent(tbllyQuantity, i, "reduce")  BRILLIANT PLAN WAS A FAILURE!!!
 
 
@@ -113,7 +113,8 @@ Public Class frmTicketEntryMain
         strSectionLabelsTicket = ArrayManipulation.StringArraySuffixer(strSectionNames, "Out")
 
 
-        GlobalClass.ClearLabelsOnTblLyOut(strSectionLabelsTicket, TicketSummary.tblyTicketSummary)
+        LabelManipulation.ClearLabelsOnTblLyOut(strSectionLabelsTicket, TicketSummary.tblyTicketSummary)
+        ArrayManipulation.TestArray()
 
     End Sub
 
