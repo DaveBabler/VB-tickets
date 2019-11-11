@@ -40,7 +40,22 @@
         Next i
         Return intSubTotal
     End Function
-
+    Public Shared Sub ArrayToArrayTotaler(ByVal intArrSeed As Integer(), ByRef intArrayCumulator As Integer())
+        'Error checking on this function will be added at a later date.
+        'This function allows for addition of one array to another. 
+        Dim intCount As Integer = intArrSeed.Count() - 1
+        For i = 0 To intCount
+            intArrayCumulator(i) += intArrSeed(i)
+        Next
+    End Sub
+    Public Shared Sub ArrayToArrayTotaler(ByVal decArrSeed As Decimal(), ByRef decArrayCumulator As Decimal())
+        'Error checking on this function will be added at a later date.
+        'This function allows for addition of one array to another. 
+        Dim intCount As Integer = decArrSeed.Count() - 1
+        For i = 0 To intCount
+            decArrayCumulator(i) += decArrSeed(i)
+        Next
+    End Sub
     Public Shared Sub ArrayPopulatorFromDictionary(ByVal intArray As Integer(), ByRef decArray As Decimal(), ByVal strArray As String(), ByVal dicLookUp As Dictionary(Of String, Decimal))
         Dim intIndex As Integer = intArray.Count() - 1
         For i = 0 To intIndex
