@@ -21,6 +21,17 @@ Public Class frmTicketEntryMain
 
     Public strSectionNames As String() = {"Orchestra", "Mezzanine", "General", "Balcony"}
     Public decPrices As Decimal() = {40.0, 27.5, 15.0, 10.0}
+    Private Sub ShowSubTotal(boolShow As Boolean)
+        If boolShow = True Then
+            lblSubtotal.Visible = True
+            lblSubtotalOut.Text = GlobalClass.decTicketSubTotal.ToString("N2")
+            lblSubtotalOut.Visible = True
+        Else
+            lblSubtotal.Visible = False
+            lblSubtotalOut.Visible = False
+        End If
+
+    End Sub
     Private Sub frmTicketEntryMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Dictionary is populated on splash screen!!!!
         GlobalClass.PopulateListBoxWithDictionary(lstSeatLocations, GlobalClass.dicSeatingPrices)
@@ -43,9 +54,9 @@ Public Class frmTicketEntryMain
 
         TextBoxManipulation.ClearTableLayoutTextBoxByChunk(strSectionNames, tbllyQuantity)
         LabelManipulation.ClearLabelsOnTblLyOut(strSectionLabelsTicket, TicketSummary.tblyTicketSummary)
-        LabelManipulation.ClearLabelsOnTblLyOut(strSectionLabelsTicket, CumulativeTicketSummary.tlblyCumulative)
-        LabelManipulation.ClearLabelsOnTblLyOut(strSectionIncome, CumulativeTicketSummary.tlblyCumulative)
-        LabelManipulation.ClearLabelsOnTblLyOut(strSectionCumulation, CumulativeTicketSummary.tlblyCumulative)
+        LabelManipulation.ClearLabelsOnTblLyOut(strSectionLabelsTicket, CumulativeTicketSummary.tblyCumulative)
+        LabelManipulation.ClearLabelsOnTblLyOut(strSectionIncome, CumulativeTicketSummary.tblyCumulative)
+        LabelManipulation.ClearLabelsOnTblLyOut(strSectionCumulation, CumulativeTicketSummary.tblyCumulative)
         GlobalClass.ClearSpecificIndividualControls()
 
 
@@ -107,19 +118,23 @@ Public Class frmTicketEntryMain
                                                        GlobalClass.dicSeatingPrices)
         GlobalClass.decTicketSubTotal = ArrayManipulation.ArrayTotaler(GlobalClass.decSubtotalPerSection)
         ShowSubTotal(True)
+        ArrayManipulation.ArrayToArrayTotaler(GlobalClass.decSubtotalPerSection, GlobalClass.decCumulativePerSection)
+        ArrayManipulation.ArrayToArrayTotaler(GlobalClass.intTotalPerSection, GlobalClass.intCumulativePurchPerSection)
+        GlobalClass.decTicketsGrandTotal = ArrayManipulation.ArrayTotaler(GlobalClass.decCumulativePerSection)
 
 
     End Sub
 
     Private Sub ResetAllDataToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetAllDataToolStripMenuItem.Click
         'Verify the customer wants to totaly remove all data before you do it!
+        Dim strAnswer = MsgBox("Are you sure you want to Clear All Data?", MsgBoxStyle.YesNo Or MsgBoxStyle.Question, "This purges all stored data!")
+        If strAnswer = vbYes Then
+            'Clear all data
+
+        End If
     End Sub
 
-    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
 
-        CumulativeTicketSummary.Show()
-
-    End Sub
 
 
 
@@ -155,21 +170,35 @@ Public Class frmTicketEntryMain
     End Sub
 
     Private Sub btnPrintReceipt_Click(sender As Object, e As EventArgs) Handles btnPrintReceipt.Click
+        GlobalClass.boolUnockCumulativeReport = True 'unlock the ability to see the cumulative report
         TicketSummary.Show()
     End Sub
-    Private Sub ShowSubTotal(boolShow As Boolean)
-        If boolShow = True Then
-            lblSubtotal.Visible = True
-            lblSubtotalOut.Text = GlobalClass.decTicketSubTotal.ToString("N2")
-            lblSubtotalOut.Visible = True
+    Private Sub PrintTicketDataToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintTicketDataToolStripMenuItem.Click
+        GlobalClass.boolUnockCumulativeReport = True 'unlock the ability to see the cumulative report
+        TicketSummary.Show()
+
+    End Sub
+
+    Private Sub PrintCumulativeSummaryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintCumulativeSummaryToolStripMenuItem.Click
+        If GlobalClass.boolUnockCumulativeReport = True Then
+            CumulativeTicketSummary.Show()
         Else
-            lblSubtotal.Visible = False
-            lblSubtotalOut.Visible = False
+            GlobalClass.UserErrorMessage("Sorry you must first print a receipt, to show you've made a sale.", "Have you sold anything?")
+        End If
+    End Sub
+
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+        Dim areYouSure = MsgBox("Are you sure you want to quit?", MsgBoxStyle.Question Or MsgBoxStyle.YesNo, "This quits!")
+        If areYouSure = vbYes Then
+            Me.Close()
         End If
 
     End Sub
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Dim areYouSure = MsgBox("Are you sure you want to quit?", MsgBoxStyle.Question Or MsgBoxStyle.YesNo, "This quits!")
+        If areYouSure = vbYes Then
+            Me.Close()
+        End If
 
-    Private Sub PrintTicketDataToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintTicketDataToolStripMenuItem.Click
-        TicketSummary.Show()
     End Sub
 End Class

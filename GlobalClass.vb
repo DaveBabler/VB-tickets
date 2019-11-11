@@ -1,4 +1,6 @@
 ﻿Public Class GlobalClass
+    Public Shared boolUnockCumulativeReport = False
+
     Public Shared intTotalPerSection(3) As Integer
     Public Shared intSubTotalNumTicks As Integer
     Public Shared intCumulativePurchPerSection(3) As Integer
@@ -7,7 +9,7 @@
     'Public Shared decAccumlatedSoldSales(3, 3) As Decimal 'why am I storing as decimal? Because I can easily convert to int for one number //forget it, too much thinking
     Public Shared strTicketPurchaser As String
     Public Shared decTicketSubTotal As Decimal
-    Public Shared decTicketGrandTotal As Decimal
+    Public Shared decTicketsGrandTotal As Decimal
 
 
     Public Shared dicSeatingPrices As New Dictionary(Of String, Decimal)

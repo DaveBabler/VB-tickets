@@ -22,7 +22,7 @@ Partial Class CumulativeTicketSummary
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.tlblyCumulative = New System.Windows.Forms.TableLayoutPanel()
+        Me.tblyCumulative = New System.Windows.Forms.TableLayoutPanel()
         Me.lblOrchestraCumulativeOut = New System.Windows.Forms.Label()
         Me.lblOrchestraPriceOut = New System.Windows.Forms.Label()
         Me.lblMezzanineCumulativeOut = New System.Windows.Forms.Label()
@@ -47,55 +47,55 @@ Partial Class CumulativeTicketSummary
         Me.lblGeneralOut = New System.Windows.Forms.Label()
         Me.lblMezzanineOut = New System.Windows.Forms.Label()
         Me.lblOrchestraOut = New System.Windows.Forms.Label()
-        Me.tlblyCumulative.SuspendLayout()
+        Me.tblyCumulative.SuspendLayout()
         Me.SuspendLayout()
         '
-        'tlblyCumulative
+        'tblyCumulative
         '
-        Me.tlblyCumulative.ColumnCount = 4
-        Me.tlblyCumulative.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.64339!))
-        Me.tlblyCumulative.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.71471!))
-        Me.tlblyCumulative.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.71471!))
-        Me.tlblyCumulative.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.92719!))
-        Me.tlblyCumulative.Controls.Add(Me.lblOrchestraCumulativeOut, 3, 6)
-        Me.tlblyCumulative.Controls.Add(Me.lblOrchestraPriceOut, 2, 6)
-        Me.tlblyCumulative.Controls.Add(Me.lblMezzanineCumulativeOut, 3, 5)
-        Me.tlblyCumulative.Controls.Add(Me.lblMezzaninePriceOut, 2, 5)
-        Me.tlblyCumulative.Controls.Add(Me.lblGeneralCumulativeOut, 3, 4)
-        Me.tlblyCumulative.Controls.Add(Me.lblGeneralPriceOut, 2, 4)
-        Me.tlblyCumulative.Controls.Add(Me.lblBalconyCumulativeOut, 3, 3)
-        Me.tlblyCumulative.Controls.Add(Me.lblBalconyPriceOut, 2, 3)
-        Me.tlblyCumulative.Controls.Add(Me.lblBalconyOut, 1, 3)
-        Me.tlblyCumulative.Controls.Add(Me.lblCumulativeSalesHeader, 3, 2)
-        Me.tlblyCumulative.Controls.Add(Me.lblTicketPriceHeader, 2, 2)
-        Me.tlblyCumulative.Controls.Add(Me.lblTotalTicketsHeader, 1, 2)
-        Me.tlblyCumulative.Controls.Add(Me.lblForOfficeUse, 0, 0)
-        Me.tlblyCumulative.Controls.Add(Me.lblHeaderCumulative, 0, 1)
-        Me.tlblyCumulative.Controls.Add(Me.lblSectionHeader, 0, 2)
-        Me.tlblyCumulative.Controls.Add(Me.lblBalcony, 0, 3)
-        Me.tlblyCumulative.Controls.Add(Me.lblGeneral, 0, 4)
-        Me.tlblyCumulative.Controls.Add(Me.lblMezzanine, 0, 5)
-        Me.tlblyCumulative.Controls.Add(Me.lblOrchestra, 0, 6)
-        Me.tlblyCumulative.Controls.Add(Me.lblTotalCumulativeSales, 0, 7)
-        Me.tlblyCumulative.Controls.Add(Me.lblTotalCumulativeOut, 3, 7)
-        Me.tlblyCumulative.Controls.Add(Me.lblGeneralOut, 1, 4)
-        Me.tlblyCumulative.Controls.Add(Me.lblMezzanineOut, 1, 5)
-        Me.tlblyCumulative.Controls.Add(Me.lblOrchestraOut, 1, 6)
-        Me.tlblyCumulative.Location = New System.Drawing.Point(9, 12)
-        Me.tlblyCumulative.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.tlblyCumulative.Name = "tlblyCumulative"
-        Me.tlblyCumulative.RowCount = 8
-        Me.tlblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 167.0!))
-        Me.tlblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60.0!))
-        Me.tlblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tlblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tlblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tlblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tlblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tlblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tlblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.tlblyCumulative.Size = New System.Drawing.Size(629, 474)
-        Me.tlblyCumulative.TabIndex = 0
+        Me.tblyCumulative.ColumnCount = 4
+        Me.tblyCumulative.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.64339!))
+        Me.tblyCumulative.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.71471!))
+        Me.tblyCumulative.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.71471!))
+        Me.tblyCumulative.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.92719!))
+        Me.tblyCumulative.Controls.Add(Me.lblOrchestraCumulativeOut, 3, 6)
+        Me.tblyCumulative.Controls.Add(Me.lblOrchestraPriceOut, 2, 6)
+        Me.tblyCumulative.Controls.Add(Me.lblMezzanineCumulativeOut, 3, 5)
+        Me.tblyCumulative.Controls.Add(Me.lblMezzaninePriceOut, 2, 5)
+        Me.tblyCumulative.Controls.Add(Me.lblGeneralCumulativeOut, 3, 4)
+        Me.tblyCumulative.Controls.Add(Me.lblGeneralPriceOut, 2, 4)
+        Me.tblyCumulative.Controls.Add(Me.lblBalconyCumulativeOut, 3, 3)
+        Me.tblyCumulative.Controls.Add(Me.lblBalconyPriceOut, 2, 3)
+        Me.tblyCumulative.Controls.Add(Me.lblBalconyOut, 1, 3)
+        Me.tblyCumulative.Controls.Add(Me.lblCumulativeSalesHeader, 3, 2)
+        Me.tblyCumulative.Controls.Add(Me.lblTicketPriceHeader, 2, 2)
+        Me.tblyCumulative.Controls.Add(Me.lblTotalTicketsHeader, 1, 2)
+        Me.tblyCumulative.Controls.Add(Me.lblForOfficeUse, 0, 0)
+        Me.tblyCumulative.Controls.Add(Me.lblHeaderCumulative, 0, 1)
+        Me.tblyCumulative.Controls.Add(Me.lblSectionHeader, 0, 2)
+        Me.tblyCumulative.Controls.Add(Me.lblBalcony, 0, 3)
+        Me.tblyCumulative.Controls.Add(Me.lblGeneral, 0, 4)
+        Me.tblyCumulative.Controls.Add(Me.lblMezzanine, 0, 5)
+        Me.tblyCumulative.Controls.Add(Me.lblOrchestra, 0, 6)
+        Me.tblyCumulative.Controls.Add(Me.lblTotalCumulativeSales, 0, 7)
+        Me.tblyCumulative.Controls.Add(Me.lblTotalCumulativeOut, 3, 7)
+        Me.tblyCumulative.Controls.Add(Me.lblGeneralOut, 1, 4)
+        Me.tblyCumulative.Controls.Add(Me.lblMezzanineOut, 1, 5)
+        Me.tblyCumulative.Controls.Add(Me.lblOrchestraOut, 1, 6)
+        Me.tblyCumulative.Location = New System.Drawing.Point(9, 12)
+        Me.tblyCumulative.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tblyCumulative.Name = "tblyCumulative"
+        Me.tblyCumulative.RowCount = 8
+        Me.tblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 167.0!))
+        Me.tblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60.0!))
+        Me.tblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tblyCumulative.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.tblyCumulative.Size = New System.Drawing.Size(629, 474)
+        Me.tblyCumulative.TabIndex = 0
         '
         'lblOrchestraCumulativeOut
         '
@@ -235,7 +235,7 @@ Partial Class CumulativeTicketSummary
         '
         Me.lblForOfficeUse.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblForOfficeUse.AutoSize = True
-        Me.tlblyCumulative.SetColumnSpan(Me.lblForOfficeUse, 4)
+        Me.tblyCumulative.SetColumnSpan(Me.lblForOfficeUse, 4)
         Me.lblForOfficeUse.Font = New System.Drawing.Font("Madonna", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblForOfficeUse.ForeColor = System.Drawing.Color.Red
         Me.lblForOfficeUse.Location = New System.Drawing.Point(3, 57)
@@ -249,7 +249,7 @@ Partial Class CumulativeTicketSummary
         '
         Me.lblHeaderCumulative.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.lblHeaderCumulative.AutoSize = True
-        Me.tlblyCumulative.SetColumnSpan(Me.lblHeaderCumulative, 4)
+        Me.tblyCumulative.SetColumnSpan(Me.lblHeaderCumulative, 4)
         Me.lblHeaderCumulative.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeaderCumulative.Location = New System.Drawing.Point(3, 182)
         Me.lblHeaderCumulative.Name = "lblHeaderCumulative"
@@ -316,7 +316,7 @@ Partial Class CumulativeTicketSummary
         '
         Me.lblTotalCumulativeSales.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTotalCumulativeSales.AutoSize = True
-        Me.tlblyCumulative.SetColumnSpan(Me.lblTotalCumulativeSales, 3)
+        Me.tblyCumulative.SetColumnSpan(Me.lblTotalCumulativeSales, 3)
         Me.lblTotalCumulativeSales.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalCumulativeSales.Location = New System.Drawing.Point(172, 450)
         Me.lblTotalCumulativeSales.Name = "lblTotalCumulativeSales"
@@ -376,19 +376,19 @@ Partial Class CumulativeTicketSummary
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(646, 824)
-        Me.Controls.Add(Me.tlblyCumulative)
+        Me.Controls.Add(Me.tblyCumulative)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(7)
         Me.Name = "CumulativeTicketSummary"
         Me.Padding = New System.Windows.Forms.Padding(126, 124, 126, 124)
         Me.Text = "CumulativeTicketSummary"
-        Me.tlblyCumulative.ResumeLayout(False)
-        Me.tlblyCumulative.PerformLayout()
+        Me.tblyCumulative.ResumeLayout(False)
+        Me.tblyCumulative.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents tlblyCumulative As TableLayoutPanel
+    Friend WithEvents tblyCumulative As TableLayoutPanel
     Friend WithEvents lblForOfficeUse As Label
     Friend WithEvents lblHeaderCumulative As Label
     Friend WithEvents lblSectionHeader As Label

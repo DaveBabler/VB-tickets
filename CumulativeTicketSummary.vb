@@ -6,13 +6,19 @@
     Public Shared Sub PopulateCumulativeReport()
         'This does no math, it only does string/array manipulation and printing to screen
         'populate price sheet
-        LabelManipulation.FillLabelsOnTblLayOut(ArrayManipulation.StringArraySuffixer((frmTicketEntryMain.strSectionNames), "PriceOut"), frmTicketEntryMain.decPrices, CumulativeTicketSummary.tlblyCumulative)
+        LabelManipulation.FillLabelsOnTblLayOut(ArrayManipulation.StringArraySuffixer((frmTicketEntryMain.strSectionNames), "PriceOut"),
+                                                frmTicketEntryMain.decPrices,
+                                                CumulativeTicketSummary.tblyCumulative)
         'cumulative sold tickets
-        ArrayManipulation.StringArraySuffixer(frmTicketEntryMain.strSectionNames, "Out")
+        LabelManipulation.FillLabelsOnTblLayOut(ArrayManipulation.StringArraySuffixer(frmTicketEntryMain.strSectionNames, "Out"),
+                                                GlobalClass.intCumulativePurchPerSection,
+                                                CumulativeTicketSummary.tblyCumulative)
         'Cumulative Price
-        ArrayManipulation.StringArraySuffixer(frmTicketEntryMain.strSectionNames, "CumulativeOut")
+        LabelManipulation.FillLabelsOnTblLayOut(ArrayManipulation.StringArraySuffixer(frmTicketEntryMain.strSectionNames, "CumulativeOut"),
+                                                GlobalClass.decCumulativePerSection,
+                                                CumulativeTicketSummary.tblyCumulative)
         'Grand Total
-        CumulativeTicketSummary.lblTotalCumulativeOut.Text = GlobalClass.decTicketGrandTotal.ToString("N2")
+        CumulativeTicketSummary.lblTotalCumulativeOut.Text = GlobalClass.decTicketsGrandTotal.ToString("N2")
     End Sub
 
     Private Sub CumulativeTicketSummary_Load(sender As Object, e As EventArgs) Handles MyBase.Load
