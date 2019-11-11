@@ -127,12 +127,6 @@
     <Compile Include="TableLayoutManipulation.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="tempshuffler.Designer.vb">
-      <DependentUpon>tempshuffler.vb</DependentUpon>
-    </Compile>
-    <Compile Include="tempshuffler.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="TextBoxManipulation.vb" />
     <Compile Include="TicketSummary.Designer.vb">
       <DependentUpon>TicketSummary.vb</DependentUpon>
@@ -159,9 +153,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="tempshuffler.resx">
-      <DependentUpon>tempshuffler.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TicketSummary.resx">
       <DependentUpon>TicketSummary.vb</DependentUpon>

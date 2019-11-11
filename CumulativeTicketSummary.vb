@@ -21,7 +21,7 @@
                                                 CumulativeTicketSummary.tblyCumulative,
                                                 "currency")
         'Grand Total
-        CumulativeTicketSummary.lblTotalCumulativeOut.Text = GlobalClass.decTicketsGrandTotal.ToString("N2")
+        CumulativeTicketSummary.lblTotalCumulativeOut.Text = GlobalClass.decTicketsGrandTotal.ToString("C")
     End Sub
 
     Private Sub CumulativeTicketSummary_Load(sender As Object, e As EventArgs) Handles MyBase.Load

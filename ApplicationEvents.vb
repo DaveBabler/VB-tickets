@@ -13,7 +13,7 @@ Namespace My
           System.Collections.ObjectModel.ReadOnlyCollection(Of String)) As Boolean
 
             ' Set the display time to 5000 milliseconds (5 seconds). 
-            Me.MinimumSplashScreenDisplayTime = 50
+            Me.MinimumSplashScreenDisplayTime = 5000
 
             Return MyBase.OnInitialize(commandLineArgs)
 
