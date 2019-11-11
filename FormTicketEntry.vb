@@ -32,7 +32,7 @@ Public Class frmTicketEntryMain
     Private Sub ShowSubTotal(boolShow As Boolean)
         If boolShow = True Then
             lblSubtotal.Visible = True
-            lblSubtotalOut.Text = GlobalClass.decTicketSubTotal.ToString("N2")
+            lblSubtotalOut.Text = GlobalClass.decTicketSubTotal.ToString("C")
             lblSubtotalOut.Visible = True
         Else
             lblSubtotal.Visible = False

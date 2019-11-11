@@ -8,7 +8,9 @@
         'populate price sheet
         LabelManipulation.FillLabelsOnTblLayOut(ArrayManipulation.StringArraySuffixer((frmTicketEntryMain.strSectionNames), "PriceOut"),
                                                 frmTicketEntryMain.decPrices,
-                                                CumulativeTicketSummary.tblyCumulative)
+                                                CumulativeTicketSummary.tblyCumulative,
+                                                "currency")
+
         'cumulative sold tickets
         LabelManipulation.FillLabelsOnTblLayOut(ArrayManipulation.StringArraySuffixer(frmTicketEntryMain.strSectionNames, "Out"),
                                                 GlobalClass.intCumulativePurchPerSection,
@@ -16,7 +18,8 @@
         'Cumulative Price
         LabelManipulation.FillLabelsOnTblLayOut(ArrayManipulation.StringArraySuffixer(frmTicketEntryMain.strSectionNames, "CumulativeOut"),
                                                 GlobalClass.decCumulativePerSection,
-                                                CumulativeTicketSummary.tblyCumulative)
+                                                CumulativeTicketSummary.tblyCumulative,
+                                                "currency")
         'Grand Total
         CumulativeTicketSummary.lblTotalCumulativeOut.Text = GlobalClass.decTicketsGrandTotal.ToString("N2")
     End Sub

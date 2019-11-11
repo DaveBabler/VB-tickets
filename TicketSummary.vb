@@ -11,7 +11,7 @@
         TicketSummary.lblPurchaserName.Text = GlobalClass.strTicketPurchaser
         TicketSummary.lblTotalPurchasedOut.Text = GlobalClass.intSubTotalNumTicks.ToString()
         LabelManipulation.FillLabelsOnTblLayOut(ArrayManipulation.StringArraySuffixer(frmTicketEntryMain.strSectionNames, "Out"), GlobalClass.intTotalPerSection, TicketSummary.tblyTicketSummary)
-        TicketSummary.lblTotalCostOut.Text = GlobalClass.decTicketSubTotal.ToString("N2")
+        TicketSummary.lblTotalCostOut.Text = GlobalClass.decTicketSubTotal.ToString("C")
 
 
     End Sub

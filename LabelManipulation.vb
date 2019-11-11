@@ -61,7 +61,7 @@
         Next y
 
     End Sub
-    Public Shared Sub FillLabelsOnTblLayOut(ByVal strArray As String(), ByVal decArray As Decimal(), ByRef tblLayoutName As System.Windows.Forms.TableLayoutPanel)
+    Public Shared Sub FillLabelsOnTblLayOut(ByVal strArray As String(), ByVal decArray As Decimal(), ByRef tblLayoutName As System.Windows.Forms.TableLayoutPanel, ByVal strCurrencyOrDec As String)
         'This sub clears labels that exist on a TableLayOutPanel which involves some more work than simple label clearing
         'This was a nightmare to figure out--Dave Babler
         Dim strValue As String = ""
@@ -74,7 +74,12 @@
                     For q As Integer = 0 To strArray.Count - 1
                         strValue = strArray(q)
                         If lb.Name.Contains(strValue) Then
-                            lb.Text = decArray(q).ToString()
+                            If strCurrencyOrDec.ToLower = "currency" Then
+                                lb.Text = decArray(q).ToString("C")
+                            Else
+                                lb.Text = decArray(q).ToString("N2")
+                            End If
+
                         End If
                     Next q
 
