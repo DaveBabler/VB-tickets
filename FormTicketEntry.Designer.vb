@@ -23,6 +23,7 @@ Partial Class frmTicketEntryMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTicketEntryMain))
         Me.btnConfirmQty = New System.Windows.Forms.Button()
         Me.lstSeatLocations = New System.Windows.Forms.ListBox()
         Me.ttTicketInfo = New System.Windows.Forms.ToolTip(Me.components)
@@ -53,6 +54,7 @@ Partial Class frmTicketEntryMain
         Me.txtQtyBalcony = New System.Windows.Forms.TextBox()
         Me.txtQtyOrchestra = New System.Windows.Forms.TextBox()
         Me.lblQtyMezzanine = New System.Windows.Forms.Label()
+        Me.printDialogue = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
         Me.mnuStripMain.SuspendLayout()
         Me.tbllyQuantity.SuspendLayout()
         Me.SuspendLayout()
@@ -68,6 +70,8 @@ Partial Class frmTicketEntryMain
         Me.btnConfirmQty.Size = New System.Drawing.Size(161, 30)
         Me.btnConfirmQty.TabIndex = 3
         Me.btnConfirmQty.Text = "Confirm &Quantities"
+        Me.ttTicketInfo.SetToolTip(Me.btnConfirmQty, "This button will " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "unlock only when " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "at least one non-zerio " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "entry has been set" &
+        ".")
         Me.btnConfirmQty.UseVisualStyleBackColor = False
         '
         'lstSeatLocations
@@ -83,6 +87,8 @@ Partial Class frmTicketEntryMain
         Me.lstSeatLocations.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
         Me.lstSeatLocations.Size = New System.Drawing.Size(116, 84)
         Me.lstSeatLocations.TabIndex = 2
+        Me.ttTicketInfo.SetToolTip(Me.lstSeatLocations, "Click to select each area you want seats." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "WARNING: deselecting an area will " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "cl" &
+        "ear the quantity for that area!")
         '
         'txtTicketPurchaser
         '
@@ -93,6 +99,7 @@ Partial Class frmTicketEntryMain
         Me.txtTicketPurchaser.Name = "txtTicketPurchaser"
         Me.txtTicketPurchaser.Size = New System.Drawing.Size(211, 22)
         Me.txtTicketPurchaser.TabIndex = 1
+        Me.ttTicketInfo.SetToolTip(Me.txtTicketPurchaser, "Whom will these tickets be for?")
         '
         'lblTicketPurchaser
         '
@@ -115,6 +122,8 @@ Partial Class frmTicketEntryMain
         Me.Label1.Size = New System.Drawing.Size(409, 36)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Madonna Ticket Sales"
+        Me.ttTicketInfo.SetToolTip(Me.Label1, "This font is from Madonna's Confessions on a Dancefloor album." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "It's her best alb" &
+        "um (so far), and the greatest album in human history (so far).")
         '
         'btnClear
         '
@@ -127,6 +136,7 @@ Partial Class frmTicketEntryMain
         Me.btnClear.Size = New System.Drawing.Size(161, 30)
         Me.btnClear.TabIndex = 5
         Me.btnClear.Text = "&Clear"
+        Me.ttTicketInfo.SetToolTip(Me.btnClear, "This clears the entries from this form.")
         Me.btnClear.UseVisualStyleBackColor = False
         '
         'btnExit
@@ -140,6 +150,7 @@ Partial Class frmTicketEntryMain
         Me.btnExit.Size = New System.Drawing.Size(161, 30)
         Me.btnExit.TabIndex = 6
         Me.btnExit.Text = "E&xit"
+        Me.ttTicketInfo.SetToolTip(Me.btnExit, "Exits program.")
         Me.btnExit.UseVisualStyleBackColor = False
         '
         'lblSubtotal
@@ -189,18 +200,22 @@ Partial Class frmTicketEntryMain
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
         Me.ExitToolStripMenuItem.Text = "&Exit"
+        Me.ExitToolStripMenuItem.ToolTipText = "Quits program."
         '
         'PrintTicketDataToolStripMenuItem
         '
         Me.PrintTicketDataToolStripMenuItem.Name = "PrintTicketDataToolStripMenuItem"
         Me.PrintTicketDataToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
         Me.PrintTicketDataToolStripMenuItem.Text = "&Print Ticket Data"
+        Me.PrintTicketDataToolStripMenuItem.ToolTipText = "Prints Individual Ticket Data" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "The same as Printing a Receipt" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'PrintCumulativeSummaryToolStripMenuItem
         '
         Me.PrintCumulativeSummaryToolStripMenuItem.Name = "PrintCumulativeSummaryToolStripMenuItem"
         Me.PrintCumulativeSummaryToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
         Me.PrintCumulativeSummaryToolStripMenuItem.Text = "Print &Cumulative Summary"
+        Me.PrintCumulativeSummaryToolStripMenuItem.ToolTipText = "For office use only!" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "This shows the tabulation of all sales" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "made while this pro" &
+    "gram is running!" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'DataToolStripMenuItem
         '
@@ -212,14 +227,15 @@ Partial Class frmTicketEntryMain
         'ClearFormToolStripMenuItem1
         '
         Me.ClearFormToolStripMenuItem1.Name = "ClearFormToolStripMenuItem1"
-        Me.ClearFormToolStripMenuItem1.Size = New System.Drawing.Size(146, 22)
+        Me.ClearFormToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.ClearFormToolStripMenuItem1.Text = "&Clear Form"
         '
         'ResetAllDataToolStripMenuItem
         '
         Me.ResetAllDataToolStripMenuItem.Name = "ResetAllDataToolStripMenuItem"
-        Me.ResetAllDataToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
+        Me.ResetAllDataToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ResetAllDataToolStripMenuItem.Text = "&Reset All Data"
+        Me.ResetAllDataToolStripMenuItem.ToolTipText = "This will reset all data in the program to default!"
         '
         'HelpToolStripMenuItem
         '
@@ -231,8 +247,9 @@ Partial Class frmTicketEntryMain
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AboutToolStripMenuItem.Text = "&About"
+        Me.AboutToolStripMenuItem.ToolTipText = "Program Information"
         '
         'btnPrintReceipt
         '
@@ -379,6 +396,14 @@ Partial Class frmTicketEntryMain
         Me.lblQtyMezzanine.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.lblQtyMezzanine.Visible = False
         '
+        'printDialogue
+        '
+        Me.printDialogue.DocumentName = "document"
+        Me.printDialogue.Form = Me
+        Me.printDialogue.PrintAction = System.Drawing.Printing.PrintAction.PrintToPreview
+        Me.printDialogue.PrinterSettings = CType(resources.GetObject("printDialogue.PrinterSettings"), System.Drawing.Printing.PrinterSettings)
+        Me.printDialogue.PrintFileName = Nothing
+        '
         'frmTicketEntryMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -440,4 +465,5 @@ Partial Class frmTicketEntryMain
     Friend WithEvents txtQtyBalcony As TextBox
     Friend WithEvents txtQtyOrchestra As TextBox
     Friend WithEvents lblQtyMezzanine As Label
+    Friend WithEvents printDialogue As PowerPacks.Printing.PrintForm
 End Class
