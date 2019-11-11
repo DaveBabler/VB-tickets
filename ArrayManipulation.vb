@@ -41,6 +41,18 @@
         Return intSubTotal
     End Function
 
+    Public Shared Sub ArrayPopulatorFromDictionary(ByVal intArray As Integer(), ByRef decArray As Decimal(), ByVal strArray As String(), ByVal dicLookUp As Dictionary(Of String, Decimal))
+        Dim intIndex As Integer = intArray.Count() - 1
+        For i = 0 To intIndex
+            If dicLookUp.ContainsKey(strArray(i)) Then
+
+                decArray(i) = intArray(i) * (dicLookUp.Item(strArray(i)))
+
+                Console.Write("The new value in the array is {0:N2}", decArray(i))
+            End If
+        Next i
+    End Sub
+
     Public Shared Function ArrayVisibilityVerifier(strStartingArray() As String) As String()
         Dim strArrayToManipulate(strStartingArray.Count() - 1)
         strArrayToManipulate = strStartingArray 'we don't necissarily want to manipulate the original array and VB will do that

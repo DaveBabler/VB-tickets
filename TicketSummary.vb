@@ -8,10 +8,10 @@
 
     End Sub
     Public Shared Sub PopulateReceipt()
-        TicketSummary.lblPurchaserName.Text = GlobalClass.strTicketPurchaser.ToString()
-        ' TicketSummary.lblTotalCost = 
-        TicketSummary.lblTotalPurchasedOut.Text = ArrayManipulation.ArrayTotaler(GlobalClass.intTotalPerSection).ToString()
+        TicketSummary.lblPurchaserName.Text = GlobalClass.strTicketPurchaser
+        TicketSummary.lblTotalPurchasedOut.Text = GlobalClass.intSubTotalNumTicks.ToString()
         LabelManipulation.FillLabelsOnTblLayOut(ArrayManipulation.StringArraySuffixer(frmTicketEntryMain.strSectionNames, "Out"), GlobalClass.intTotalPerSection, TicketSummary.tblyTicketSummary)
+        TicketSummary.lblTotalCostOut.Text = GlobalClass.decTicketSubTotal.ToString("N2")
 
 
     End Sub

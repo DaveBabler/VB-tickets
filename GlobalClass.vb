@@ -1,7 +1,9 @@
 ﻿Public Class GlobalClass
     Public Shared intTotalPerSection(3) As Integer
+    Public Shared intSubTotalNumTicks As Integer
     Public Shared intCumulativePurchPerSection(3) As Integer
     Public Shared decCumulativePerSection(3) As Decimal
+    Public Shared decSubtotalPerSection(3) As Decimal 'this is where the subtotal will be built from
     'Public Shared decAccumlatedSoldSales(3, 3) As Decimal 'why am I storing as decimal? Because I can easily convert to int for one number //forget it, too much thinking
     Public Shared strTicketPurchaser As String
     Public Shared decTicketSubTotal As Decimal

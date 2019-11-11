@@ -52,7 +52,8 @@ Public Class frmTicketEntryMain
     End Sub
 
     Private Sub lstSeatLocations_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstSeatLocations.SelectedIndexChanged
-
+        'This does visual and some mathmatical logic when the selection is changed, it also unlocks the confirm quantities button.
+        btnConfirmQty.Enabled = True
         Dim strUnselected As String = ""
         Dim strSelectedValue As String = ""
         For i As Integer = 0 To lstSeatLocations.Items.Count - 1
@@ -96,20 +97,18 @@ Public Class frmTicketEntryMain
             txtTicketPurchaser.Focus()
 
         Else
-            GlobalClass.strTicketPurchaser = txtTicketPurchaser.ToString()
+            GlobalClass.strTicketPurchaser = txtTicketPurchaser.Text.ToString()
         End If
         btnPrintReceipt.Enabled = True
+        GlobalClass.intSubTotalNumTicks = ArrayManipulation.ArrayTotaler(GlobalClass.intTotalPerSection)
+        ArrayManipulation.ArrayPopulatorFromDictionary(GlobalClass.intTotalPerSection,
+                                                       GlobalClass.decSubtotalPerSection,
+                                                       strSectionNames,
+                                                       GlobalClass.dicSeatingPrices)
+        GlobalClass.decTicketSubTotal = ArrayManipulation.ArrayTotaler(GlobalClass.decSubtotalPerSection)
+        ShowSubTotal(True)
 
 
-        Console.WriteLine("{0:C}", decPrices(1))
-        For i = 0 To GlobalClass.intTotalPerSection.Count() - 1
-            Console.WriteLine("{0} | {1:C}", i, GlobalClass.intTotalPerSection(i))
-        Next
-
-        Console.WriteLine("{0:C}", decPrices(1))
-        For Each pair In GlobalClass.dicSeatingPrices
-            Console.WriteLine("{0} | {1:C}", pair.Key, pair.Value)
-        Next
     End Sub
 
     Private Sub ResetAllDataToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetAllDataToolStripMenuItem.Click
@@ -156,6 +155,21 @@ Public Class frmTicketEntryMain
     End Sub
 
     Private Sub btnPrintReceipt_Click(sender As Object, e As EventArgs) Handles btnPrintReceipt.Click
+        TicketSummary.Show()
+    End Sub
+    Private Sub ShowSubTotal(boolShow As Boolean)
+        If boolShow = True Then
+            lblSubtotal.Visible = True
+            lblSubtotalOut.Text = GlobalClass.decTicketSubTotal.ToString("N2")
+            lblSubtotalOut.Visible = True
+        Else
+            lblSubtotal.Visible = False
+            lblSubtotalOut.Visible = False
+        End If
+
+    End Sub
+
+    Private Sub PrintTicketDataToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintTicketDataToolStripMenuItem.Click
         TicketSummary.Show()
     End Sub
 End Class

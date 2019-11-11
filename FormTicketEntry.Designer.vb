@@ -62,6 +62,7 @@ Partial Class frmTicketEntryMain
         'btnConfirmQty
         '
         Me.btnConfirmQty.BackColor = System.Drawing.Color.Black
+        Me.btnConfirmQty.Enabled = False
         Me.btnConfirmQty.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnConfirmQty.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold)
         Me.btnConfirmQty.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
