@@ -30,7 +30,6 @@
             btnToModify.ForeColor = Color.Black
         End If
 
-
     End Sub
 
     Public Shared Sub ClearSpecificIndividualControls()
@@ -91,7 +90,20 @@
     End Sub
 
 
+    Public Shared Sub WipeValues()
+        'Resets Everything to default values
+        GlobalClass.boolUnockCumulativeReport = False
+        GlobalClass.intSubTotalNumTicks = 0
+        ReDim GlobalClass.intTotalPerSection(3)
+        ReDim GlobalClass.intCumulativePurchPerSection(3)
+        ReDim GlobalClass.decCumulativePerSection(3)
+        ReDim GlobalClass.decSubtotalPerSection(3)
+        GlobalClass.strTicketPurchaser = ""
+        GlobalClass.decTicketSubTotal = 0
+        GlobalClass.decTicketsGrandTotal = 0
 
+
+    End Sub
 
 
 

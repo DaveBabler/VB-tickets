@@ -19,8 +19,16 @@
 Public Class frmTicketEntryMain
 
 
+
+    Dim strSectionLabelsTicket(intSectOrig) As String
+    Dim strSectionIncome(intSectOrig) As String
+    Dim strSectionCumulation(intSectOrig) As String
+
     Public strSectionNames As String() = {"Orchestra", "Mezzanine", "General", "Balcony"}
     Public decPrices As Decimal() = {40.0, 27.5, 15.0, 10.0}
+
+    Dim intSectOrig As Integer = strSectionNames.Count() - 1  'don't forget to subtract 1 to dim the array holy god that was awful
+
     Private Sub ShowSubTotal(boolShow As Boolean)
         If boolShow = True Then
             lblSubtotal.Visible = True
@@ -38,14 +46,6 @@ Public Class frmTicketEntryMain
 
         'Wipe all the labels and text boxes that have holding patterns
 
-
-
-        Dim intSectOrig As Integer = strSectionNames.Count() - 1  'don't forget to subtract 1 to dim the array holy god that was awful
-
-
-        Dim strSectionLabelsTicket(intSectOrig) As String
-        Dim strSectionIncome(intSectOrig) As String
-        Dim strSectionCumulation(intSectOrig) As String
 
 
         strSectionLabelsTicket = ArrayManipulation.StringArraySuffixer(strSectionNames, "Out")
@@ -129,8 +129,22 @@ Public Class frmTicketEntryMain
         'Verify the customer wants to totaly remove all data before you do it!
         Dim strAnswer = MsgBox("Are you sure you want to Clear All Data?", MsgBoxStyle.YesNo Or MsgBoxStyle.Question, "This purges all stored data!")
         If strAnswer = vbYes Then
-            'Clear all data
+            GlobalClass.WipeValues()
+            btnPrintReceipt.Enabled = False
+            lstSeatLocations.ClearSelected()
+            'close section entries
 
+            strSectionLabelsTicket = ArrayManipulation.StringArraySuffixer(strSectionNames, "Out")
+            strSectionIncome = ArrayManipulation.StringArraySuffixer(strSectionNames, "PriceOut")
+            strSectionCumulation = ArrayManipulation.StringArraySuffixer(strSectionNames, "CumulativeOut")
+
+            TextBoxManipulation.ClearTableLayoutTextBoxByChunk(strSectionNames, tbllyQuantity)
+            LabelManipulation.ClearLabelsOnTblLyOut(strSectionLabelsTicket, TicketSummary.tblyTicketSummary)
+            LabelManipulation.ClearLabelsOnTblLyOut(strSectionLabelsTicket, CumulativeTicketSummary.tblyCumulative)
+            LabelManipulation.ClearLabelsOnTblLyOut(strSectionIncome, CumulativeTicketSummary.tblyCumulative)
+            LabelManipulation.ClearLabelsOnTblLyOut(strSectionCumulation, CumulativeTicketSummary.tblyCumulative)
+            GlobalClass.ClearSpecificIndividualControls()
+            ClearTicketEntryControls()
         End If
     End Sub
 
@@ -141,6 +155,8 @@ Public Class frmTicketEntryMain
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         ClearTicketEntryControls()
+
+
 
     End Sub
 
@@ -155,6 +171,12 @@ Public Class frmTicketEntryMain
         frmTicketEntryMain.txtTicketPurchaser.Clear()
         frmTicketEntryMain.lblSubtotalOut.Text = ""
 
+        frmTicketEntryMain.lstSeatLocations.ClearSelected()
+        'close section entries
+        For i As Integer = 0 To frmTicketEntryMain.lstSeatLocations.Items.Count - 1
+
+            LabelManipulation.CheckLabelVisibility(frmTicketEntryMain, frmTicketEntryMain.strSectionNames(i), True, False, "integer")
+        Next i
     End Sub
 
     Private Sub btnConfirmQty_MouseEnter(sender As Object, e As EventArgs) Handles btnConfirmQty.MouseEnter
