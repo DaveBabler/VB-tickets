@@ -29,11 +29,11 @@
     End Sub
 
 
-    Public Shared Function SaveTableLayOutTextBoxToArray(ByVal strArray As String(), ByRef tblLayoutName As System.Windows.Forms.TableLayoutPanel) As Integer()
+    Public Shared Sub SaveTableLayOutTextBoxToArray(ByVal strArray As String(), ByRef tblLayoutName As System.Windows.Forms.TableLayoutPanel, ByRef intNewArray As Integer())
         'loops through textboxes in a tablelayout and then shoves them in an array
         'this can be overloaded in the future to accomodate decimals with very little effort. Save this to your codebase
         Dim intArrayLength As Integer = (strArray.Count - 1)
-        Dim intNewArray(intArrayLength) As Integer
+
 
         'This sub clears labels that exist on a TableLayOutPanel which involves some more work than simple label clearing
         'This was a nightmare to figure out--Dave Babler
@@ -43,12 +43,14 @@
                 Dim tb As TextBox = TryCast(tblLayoutName.GetControlFromPosition(x, y), TextBox)
 
                 If tb IsNot Nothing Then
+                    Console.WriteLine("This is text box name {0}, this is textbox value {1}", tb.Name, tb.Text.ToString())
                     For q As Integer = 0 To strArray.Count - 1
                         strValue = strArray(q)
                         Console.WriteLine("String is " & strValue)
                         If tb.Name.Contains(strValue) Then
 
-                            intNewArray(q) = CInt(tb.Text)
+                            Int16.TryParse(tb.Text, intNewArray(q))
+                            Console.WriteLine("intNewArray is {0}", intNewArray(q).ToString())
 
                         End If
                     Next q
@@ -57,7 +59,7 @@
 
             Next x
         Next y
-    End Function
+    End Sub
 
 
     Public Shared Sub ClearTextBoxTextByChunk(ByRef ctrlContainer As Control, strValue As String)

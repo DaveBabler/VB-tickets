@@ -74,6 +74,7 @@
 
 
 
+
     Public Shared Sub ArrayRemoveEmpty(ByRef strArrayToTrim() As String, ByVal boolWhiteSpaceFlag As Boolean)
         'This finds all the empty elements of an array then trims it 
         'The boolean flag is a helpful flag to determine if we want to count whitespace as null

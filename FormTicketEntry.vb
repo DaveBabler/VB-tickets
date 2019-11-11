@@ -1,4 +1,4 @@
-﻿' Program:                Yachts 
+﻿' Program:                Concert Tickets 
 ' Author:                 Dave Babler
 ' Date:                   2019-11-03
 ' Purpose:                Produces a summary report showing total revuneu, number of charters, and average hours per charter based on user input
@@ -7,13 +7,11 @@
 '                         #ccff00|rgb(204, 255, 0) Electric Lime
 '                         End split complementary color scheme
 '                         Standard Windows colors: Black, Gainsboro
-' Assignment Paramaters:  Create a project to input boat chartering and produce a summary report showing total revenue, number of charters, and average hours per charter. 
-'                         User will input party name & hours wanted, Select yacht type & length (dropdown combo boxes), Then cost will be calculated And displayed With OK button.
-'                         Menu bar sample With hotkeys & shortcuts
-'                         ______________________________________________________________________________________________
-'                         Ability to: add/ remove a yacht type, list count Of types, print a list/report of all types. 
-'                         Summary Report includes:  # charters, total revenue, average hours chartered, And programmer name. 
-'                         Yacht Type Report will list the yacht types in the combo box with programmer name And title at top.
+' Assignment Paramaters:  Create a project to keep track of concert ticket sales using arrays. 
+'                         Ticket prices are based On seating location. Display the ticket price schedule On a form. 
+'                         Calculate the price For Each sale, accumulating the total number Of tickets sold For Each section In an array; 
+'                         print a summary Of all sales, include total tickets And $ In summary.
+
 
 'dynamic text box generation https://stackoverflow.com/questions/11827527/how-to-get-value-in-dynamic-generated-textbox
 'hiding table layout panel columns & rows https://stackoverflow.com/questions/3290414/hide-and-show-a-cell-of-the-tablelayoutpanel
@@ -84,20 +82,29 @@ Public Class frmTicketEntryMain
     End Sub
 
     Private Sub btnConfirmQty_Click(sender As Object, e As EventArgs) Handles btnConfirmQty.Click
-        'You
-        'Have
-        'Got
-        'To
-        'Do
-        'a try catch block here to make sure only integers are accepted in the text boxes
+
+        Try
+            TextBoxManipulation.SaveTableLayOutTextBoxToArray(strSectionNames,
+                                                              tbllyQuantity,
+                                                              GlobalClass.intTotalPerSection)
+        Catch ex As Exception
+            GlobalClass.UserErrorMessage("You must enter a whole number", "Data Type Error")
+        End Try
 
         If txtTicketPurchaser.Text = "" Then
             GlobalClass.UserErrorMessage("You must enter in the purchaser's name to proceed", "Please fill in the form!")
             txtTicketPurchaser.Focus()
 
         Else
-
+            GlobalClass.strTicketPurchaser = txtTicketPurchaser.ToString()
         End If
+        btnPrintReceipt.Enabled = True
+
+
+        Console.WriteLine("{0:C}", decPrices(1))
+        For i = 0 To GlobalClass.intTotalPerSection.Count() - 1
+            Console.WriteLine("{0} | {1:C}", i, GlobalClass.intTotalPerSection(i))
+        Next
 
         Console.WriteLine("{0:C}", decPrices(1))
         For Each pair In GlobalClass.dicSeatingPrices
@@ -110,9 +117,8 @@ Public Class frmTicketEntryMain
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        TicketSummary.Show()
-        CumulativeTicketSummary.Show()
 
+        CumulativeTicketSummary.Show()
 
     End Sub
 
@@ -120,16 +126,12 @@ Public Class frmTicketEntryMain
 
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-
+        ClearTicketEntryControls()
 
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
         frmAbout.ShowDialog()
-    End Sub
-
-    Private Sub btnConfirmQty_MouseHover(sender As Object, e As EventArgs) Handles btnConfirmQty.MouseHover
-        GlobalClass.ButtonFlash(btnConfirmQty)
     End Sub
 
 
@@ -141,4 +143,19 @@ Public Class frmTicketEntryMain
 
     End Sub
 
+    Private Sub btnConfirmQty_MouseEnter(sender As Object, e As EventArgs) Handles btnConfirmQty.MouseEnter
+        If btnConfirmQty.Enabled = True Then
+            GlobalClass.ButtonFlashHover(btnConfirmQty, False)
+        End If
+    End Sub
+
+    Private Sub btnConfirmQty_MouseLeave(sender As Object, e As EventArgs) Handles btnConfirmQty.MouseLeave
+        If btnConfirmQty.Enabled = True Then
+            GlobalClass.ButtonFlashHover(btnConfirmQty, True)
+        End If
+    End Sub
+
+    Private Sub btnPrintReceipt_Click(sender As Object, e As EventArgs) Handles btnPrintReceipt.Click
+        TicketSummary.Show()
+    End Sub
 End Class

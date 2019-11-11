@@ -61,7 +61,7 @@
         Next y
 
     End Sub
-    Public Shared Sub FillLabelsOnTblLayOut(ByVal strArray As String(), ByVal decArray As Decimal, ByRef tblLayoutName As System.Windows.Forms.TableLayoutPanel)
+    Public Shared Sub FillLabelsOnTblLayOut(ByVal strArray As String(), ByVal decArray As Decimal(), ByRef tblLayoutName As System.Windows.Forms.TableLayoutPanel)
         'This sub clears labels that exist on a TableLayOutPanel which involves some more work than simple label clearing
         'This was a nightmare to figure out--Dave Babler
         Dim strValue As String = ""
@@ -74,7 +74,32 @@
                     For q As Integer = 0 To strArray.Count - 1
                         strValue = strArray(q)
                         If lb.Name.Contains(strValue) Then
-                            lb.Text = ""
+                            lb.Text = decArray(q).ToString()
+                        End If
+                    Next q
+
+                End If
+
+            Next x
+        Next y
+
+    End Sub
+
+    Public Shared Sub FillLabelsOnTblLayOut(ByVal strArray As String(), ByVal intArray As Integer(), ByRef tblLayoutName As System.Windows.Forms.TableLayoutPanel)
+        'This sub clears labels that exist on a TableLayOutPanel which involves some more work than simple label clearing
+        'This was a nightmare to figure out--Dave Babler
+        Dim strValue As String = ""
+
+        For y As Integer = 0 To tblLayoutName.RowCount - 1
+            For x As Integer = 0 To tblLayoutName.ColumnCount - 1
+                Dim lb As Label = TryCast(tblLayoutName.GetControlFromPosition(x, y), Label)
+
+                If lb IsNot Nothing Then
+                    For q As Integer = 0 To strArray.Count - 1
+                        strValue = strArray(q)
+                        If lb.Name.Contains(strValue) Then
+                            lb.Text = intArray(q).ToString()
+                            Console.WriteLine("This is the intArray " & intArray(q).ToString())
                         End If
                     Next q
 
